@@ -1,0 +1,12 @@
+package org.example.bookease.controller;
+
+import org.example.bookease.entity.Room;
+import org.example.bookease.service.RoomService;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class RoomController extends AbstractController<Room> {
+    protected RoomController(RoomService service) {
+        super(service);
+    }
+}
