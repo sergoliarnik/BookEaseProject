@@ -1,4 +1,6 @@
 package org.example.bookease.service;
 
-public interface RoomService {
+import org.example.bookease.entity.Room;
+
+public interface RoomService extends CrudService<Room>{
 }

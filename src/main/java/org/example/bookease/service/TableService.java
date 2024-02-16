@@ -1,4 +1,6 @@
 package org.example.bookease.service;
 
-public interface TableService {
+import org.example.bookease.entity.Table;
+
+public interface TableService extends CrudService<Table>{
 }

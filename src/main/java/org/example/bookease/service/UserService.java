@@ -1,4 +1,6 @@
 package org.example.bookease.service;
 
-public interface UserService {
+import org.example.bookease.entity.User;
+
+public interface UserService extends CrudService<User>{
 }
