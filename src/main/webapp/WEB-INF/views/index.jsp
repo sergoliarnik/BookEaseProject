@@ -248,7 +248,7 @@
             <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                 <div class="room">
                     <a href="rooms" class="img d-flex justify-content-center align-items-center"
-                       style="background-image: url(images/hotel-1.jpg);">
+                       style='background-image: url(${hotel.imageUrl});'>
                         <div class="icon d-flex justify-content-center align-items-center">
                             <span class="icon-search2"></span>
                         </div>

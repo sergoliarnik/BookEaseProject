@@ -19,6 +19,8 @@ public class Hotel {
 
     private String name;
 
+    private String imageUrl;
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "company_id", nullable = false)
     private Company company;
