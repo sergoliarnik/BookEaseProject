@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
+<%@ page contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,6 +244,7 @@
             </div>
         </div>
         <div class="row">
+            <c:forEach var="hotel" items="${hotelList}">
             <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                 <div class="room">
                     <a href="rooms" class="img d-flex justify-content-center align-items-center"
@@ -250,93 +254,14 @@
                         </div>
                     </a>
                     <div class="text p-3 text-center">
-                        <h3 class="mb-3"><a href="rooms">Suite Room</a></h3>
+                        <h3 class="mb-3"><a href="rooms">${hotel.name}</a></h3>
                         <hr>
-                        <p class="pt-1"><a href="rooms" class="btn-custom">View Hotel Details <span
+                        <p class="pt-1"><a href="rooms" class="btn-custom">${hotel.name} <span
                                 class="icon-long-arrow-right"></span></a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms" class="img d-flex justify-content-center align-items-center"
-                       style="background-image: url(images/hotel-2.jpg);">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3"><a href="rooms">Family Room</a></h3>
-                        <hr>
-                        <p class="pt-1"><a href="rooms" class="btn-custom">View Hotel Details <span
-                                class="icon-long-arrow-right"></span></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms" class="img d-flex justify-content-center align-items-center"
-                       style="background-image: url(images/hotel-3.jpg);">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3"><a href="rooms">Deluxe Room</a></h3>
-                        <hr>
-                        <p class="pt-1"><a href="rooms" class="btn-custom">View Hotel Details <span
-                                class="icon-long-arrow-right"></span></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms" class="img d-flex justify-content-center align-items-center"
-                       style="background-image: url(images/hotel-4.jpg);">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3"><a href="rooms">Classic Room</a></h3>
-                        <hr>
-                        <p class="pt-1"><a href="rooms" class="btn-custom">View Hotel Details <span
-                                class="icon-long-arrow-right"></span></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms" class="img d-flex justify-content-center align-items-center"
-                       style="background-image: url(images/room-5.jpg);">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3"><a href="rooms">Superior Room</a></h3>
-                        <hr>
-                        <p class="pt-1"><a href="rooms" class="btn-custom">View Hotel Details <span
-                                class="icon-long-arrow-right"></span></a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                <div class="room">
-                    <a href="rooms" class="img d-flex justify-content-center align-items-center"
-                       style="background-image: url(images/room-6.jpg);">
-                        <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
-                        </div>
-                    </a>
-                    <div class="text p-3 text-center">
-                        <h3 class="mb-3"><a href="rooms">Luxury Room</a></h3>
-                        <hr>
-                        <p class="pt-1"><a href="rooms" class="btn-custom">View Hotel Details <span
-                                class="icon-long-arrow-right"></span></a></p>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
         </div>
     </div>
 </section>
