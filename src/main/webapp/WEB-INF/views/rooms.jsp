@@ -35,19 +35,17 @@
                     <c:forEach items="${roomList}" var="room">
                     <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                         <div class="room">
-                            <a href="rooms-single" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/room-1.jpg);">
+                            <a href="rooms-single" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
                                 <div class="icon d-flex justify-content-center align-items-center">
                                     <span class="icon-search2"></span>
                                 </div>
                             </a>
                             <div class="text p-3 text-center">
-                                <h3 class="mb-3"><a href="rooms-single.html">${room.number}</a></h3>
-                                <p><span class="price mr-2">$120.00</span> <span class="per">per night</span></p>
+                                <h3 class="mb-3"><a href="rooms-single">${room.type}</a></h3>
+                                <p><span class="price mr-2">$${room.pricePerNight}</span> <span class="per">per night</span></p>
                                 <ul class="list">
-                                    <li><span>Max:</span> 3 Persons</li>
-                                    <li><span>Size:</span> 45 m2</li>
-                                    <li><span>View:</span> Sea View</li>
-                                    <li><span>Bed:</span> 1</li>
+                                    <li><span>Max:</span> ${room.maxPeople} Persons</li>
+                                    <li><span>Bed:</span> ${room.beds}</li>
                                 </ul>
                                 <hr>
                                 <p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p>
