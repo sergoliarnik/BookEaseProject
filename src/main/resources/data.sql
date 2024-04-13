@@ -14,10 +14,10 @@ INSERT INTO hotel (id, name, image_url, company_id)
            ('0fb4ea23-eb3e-411b-b548-db62d052c99a', 'Hotel Hyst', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/468106309.jpg?k=121aa64fb64b61b99e9ffc46c2e4d3eef6b882f847ac098deda619d4f5a09b86&o=&hp=1', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc');
 
 -- ROOMS
-INSERT INTO room (id, number, hotel_id)
-    VALUES ('8788b001-269e-4dbd-92c8-b647b478def0', 0, '8788b001-269e-4dbd-92c8-b647b478def0'),
-           ('0bec3c56-9393-47b2-8061-1030ef4dc2ef', 1, '8788b001-269e-4dbd-92c8-b647b478def0'),
-           ('0fb4ea23-eb3e-411b-b548-db62d052c99a', 2, '8788b001-269e-4dbd-92c8-b647b478def0');
+INSERT INTO room (id, hotel_id)
+    VALUES ('8788b001-269e-4dbd-92c8-b647b478def0', '8788b001-269e-4dbd-92c8-b647b478def0'),
+           ('0bec3c56-9393-47b2-8061-1030ef4dc2ef', '8788b001-269e-4dbd-92c8-b647b478def0'),
+           ('0fb4ea23-eb3e-411b-b548-db62d052c99a', '8788b001-269e-4dbd-92c8-b647b478def0');
 
 -- RESTAURANTS
 INSERT INTO restaurant (id, name, company_id)
