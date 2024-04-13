@@ -2,7 +2,9 @@ package org.example.bookease.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.bookease.entity.Hotel;
+import org.example.bookease.entity.Room;
 import org.example.bookease.service.HotelService;
+import org.example.bookease.service.RoomService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -14,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequiredArgsConstructor
 public class WebController {
     private final HotelService hotelService;
+    private final RoomService roomService;
 
     @GetMapping
     public ModelAndView index() {
@@ -54,7 +57,10 @@ public class WebController {
     }
 
     @GetMapping("/rooms")
-    public String rooms() {
-        return "rooms";
+    public ModelAndView rooms() {
+        Pageable pageable = PageRequest.of(0, 10_000_000);
+        Page<Room> rooms = roomService.findAll(pageable);
+        return new ModelAndView("rooms")
+                .addObject(rooms.getContent());
     }
 }
