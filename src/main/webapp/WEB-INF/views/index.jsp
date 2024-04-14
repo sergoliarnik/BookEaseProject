@@ -15,7 +15,7 @@
 <jsp:include page="includes/header.jsp"/>
 
 <section class="home-slider owl-carousel">
-    <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+    <div class="slider-item" style="background-image:url(/images/bg_1.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+    <div class="slider-item" style="background-image:url(/images/bg_2.jpg);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -141,7 +141,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center"
-                 style="background-image: url(images/bg_2.jpg);">
+                 style="background-image: url(/images/bg_2.jpg);">
                 <a href="https://vimeo.com/45830194"
                    class="icon popup-vimeo d-flex justify-content-center align-items-center">
                     <span><i class="fa-solid fa-play"></i></span>
@@ -264,7 +264,7 @@
     </div>
 </section>
 
-<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_1.jpg);">
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(/images/bg_1.jpg);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
@@ -317,7 +317,7 @@
                         <div class="carousel-testimony owl-carousel ftco-owl">
                             <div class="item">
                                 <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                                    <div class="user-img mb-4" style="background-image: url(/images/person_1.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
 		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
@@ -333,7 +333,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+                                    <div class="user-img mb-4" style="background-image: url(/images/person_2.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
 		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
@@ -349,7 +349,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                                    <div class="user-img mb-4" style="background-image: url(/images/person_3.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
 		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
@@ -365,7 +365,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                                    <div class="user-img mb-4" style="background-image: url(/images/person_1.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
 		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
@@ -381,7 +381,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                                    <div class="user-img mb-4" style="background-image: url(/images/person_1.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
 		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
@@ -414,7 +414,7 @@
         <div class="row d-flex">
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single" class="block-20" style="background-image: url('images/image_1.jpg');">
+                    <a href="blog-single" class="block-20" style="background-image: url('/images/image_1.jpg');">
                     </a>
                     <div class="text mt-3 d-block">
                         <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
@@ -429,7 +429,7 @@
             </div>
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single" class="block-20" style="background-image: url('images/image_2.jpg');">
+                    <a href="blog-single" class="block-20" style="background-image: url('/images/image_2.jpg');">
                     </a>
                     <div class="text mt-3">
                         <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
@@ -444,7 +444,7 @@
             </div>
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single" class="block-20" style="background-image: url('images/image_3.jpg');">
+                    <a href="blog-single" class="block-20" style="background-image: url('/images/image_3.jpg');">
                     </a>
                     <div class="text mt-3">
                         <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
@@ -459,7 +459,7 @@
             </div>
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single" class="block-20" style="background-image: url('images/image_4.jpg');">
+                    <a href="blog-single" class="block-20" style="background-image: url('/images/image_4.jpg');">
                     </a>
                     <div class="text mt-3">
                         <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
@@ -485,40 +485,40 @@
         </div>
         <div class="row no-gutters">
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-1.jpg" class="insta-img image-popup"
-                   style="background-image: url(images/insta-1.jpg);">
+                <a href="/images/insta-1.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/insta-1.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-2.jpg" class="insta-img image-popup"
-                   style="background-image: url(images/insta-2.jpg);">
+                <a href="/images/insta-2.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/insta-2.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-3.jpg" class="insta-img image-popup"
-                   style="background-image: url(images/insta-3.jpg);">
+                <a href="/images/insta-3.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/insta-3.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-4.jpg" class="insta-img image-popup"
-                   style="background-image: url(images/insta-4.jpg);">
+                <a href="/images/insta-4.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/insta-4.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-5.jpg" class="insta-img image-popup"
-                   style="background-image: url(images/insta-5.jpg);">
+                <a href="/images/insta-5.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/insta-5.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>

@@ -11,7 +11,7 @@
 
 <jsp:include page="includes/header.jsp"/>
 
-<div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
+<div class="hero-wrap" style="background-image: url('/images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
@@ -38,7 +38,7 @@
                     enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta
                     architecto tempora.</p>
                 <p>
-                    <img src="images/image_7.jpg" alt="" class="img-fluid">
+                    <img src="/images/image_7.jpg" alt="" class="img-fluid">
                 </p>
                 <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt
                     doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo
@@ -50,7 +50,7 @@
                     dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi
                     repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
                 <p>
-                    <img src="images/image_8.jpg" alt="" class="img-fluid">
+                    <img src="/images/image_8.jpg" alt="" class="img-fluid">
                 </p>
                 <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod,
                     est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab
@@ -81,7 +81,7 @@
 
                 <div class="about-author d-flex p-4 bg-light">
                     <div class="bio align-self-md-center mr-4">
-                        <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
+                        <img src="/images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
                     </div>
                     <div class="desc align-self-md-center">
                         <h3>Lance Smith</h3>
@@ -97,7 +97,7 @@
                     <ul class="comment-list">
                         <li class="comment">
                             <div class="vcard bio">
-                                <img src="images/person_1.jpg" alt="Image placeholder">
+                                <img src="/images/person_1.jpg" alt="Image placeholder">
                             </div>
                             <div class="comment-body">
                                 <h3>John Doe</h3>
@@ -111,7 +111,7 @@
 
                         <li class="comment">
                             <div class="vcard bio">
-                                <img src="images/person_1.jpg" alt="Image placeholder">
+                                <img src="/images/person_1.jpg" alt="Image placeholder">
                             </div>
                             <div class="comment-body">
                                 <h3>John Doe</h3>
@@ -125,7 +125,7 @@
                             <ul class="children">
                                 <li class="comment">
                                     <div class="vcard bio">
-                                        <img src="images/person_1.jpg" alt="Image placeholder">
+                                        <img src="/images/person_1.jpg" alt="Image placeholder">
                                     </div>
                                     <div class="comment-body">
                                         <h3>John Doe</h3>
@@ -141,7 +141,7 @@
                                     <ul class="children">
                                         <li class="comment">
                                             <div class="vcard bio">
-                                                <img src="images/person_1.jpg" alt="Image placeholder">
+                                                <img src="/images/person_1.jpg" alt="Image placeholder">
                                             </div>
                                             <div class="comment-body">
                                                 <h3>John Doe</h3>
@@ -156,7 +156,7 @@
                                             <ul class="children">
                                                 <li class="comment">
                                                     <div class="vcard bio">
-                                                        <img src="images/person_1.jpg" alt="Image placeholder">
+                                                        <img src="/images/person_1.jpg" alt="Image placeholder">
                                                     </div>
                                                     <div class="comment-body">
                                                         <h3>John Doe</h3>
@@ -177,7 +177,7 @@
 
                         <li class="comment">
                             <div class="vcard bio">
-                                <img src="images/person_1.jpg" alt="Image placeholder">
+                                <img src="/images/person_1.jpg" alt="Image placeholder">
                             </div>
                             <div class="comment-body">
                                 <h3>John Doe</h3>
@@ -244,7 +244,7 @@
                 <div class="sidebar-box ftco-animate">
                     <h3>Recent Blog</h3>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                        <a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                 blind texts</a></h3>
@@ -256,7 +256,7 @@
                         </div>
                     </div>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                        <a class="blog-img mr-4" style="background-image: url(/images/image_2.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                 blind texts</a></h3>
@@ -268,7 +268,7 @@
                         </div>
                     </div>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
+                        <a class="blog-img mr-4" style="background-image: url(/images/image_3.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
                                 blind texts</a></h3>

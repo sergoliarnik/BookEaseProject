@@ -11,7 +11,7 @@
 
 <jsp:include page="includes/header.jsp"/>
 
-<div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
+<div class="hero-wrap" style="background-image: url('/images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
@@ -28,7 +28,7 @@
 <section class="ftco-section ftc-no-pb ftc-no-pt">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 p-md-5 img img-2 img-3 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
+            <div class="col-md-5 p-md-5 img img-2 img-3 d-flex justify-content-center align-items-center" style="background-image: url(/images/about.jpg);">
             </div>
             <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
                 <div class="heading-section heading-section-wo-line pt-md-4 mb-5">
@@ -57,7 +57,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu-1.jpg);"></div>
+                    <div class="img" style="background-image: url(/images/menu-1.jpg);"></div>
                     <div class="desc pl-3">
                         <div class="d-flex text align-items-center">
                             <h3><span>Grilled Beef with potatoes</span></h3>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu-2.jpg);"></div>
+                    <div class="img" style="background-image: url(/images/menu-2.jpg);"></div>
                     <div class="desc pl-3">
                         <div class="d-flex text align-items-center">
                             <h3><span>Grilled Beef with potatoes</span></h3>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu-3.jpg);"></div>
+                    <div class="img" style="background-image: url(/images/menu-3.jpg);"></div>
                     <div class="desc pl-3">
                         <div class="d-flex text align-items-center">
                             <h3><span>Grilled Beef with potatoes</span></h3>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu-4.jpg);"></div>
+                    <div class="img" style="background-image: url(/images/menu-4.jpg);"></div>
                     <div class="desc pl-3">
                         <div class="d-flex text align-items-center">
                             <h3><span>Grilled Beef with potatoes</span></h3>
@@ -108,7 +108,7 @@
 
             <div class="col-md-6">
                 <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu-5.jpg);"></div>
+                    <div class="img" style="background-image: url(/images/menu-5.jpg);"></div>
                     <div class="desc pl-3">
                         <div class="d-flex text align-items-center">
                             <h3><span>Grilled Beef with potatoes</span></h3>
@@ -120,7 +120,7 @@
                     </div>
                 </div>
                 <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu-6.jpg);"></div>
+                    <div class="img" style="background-image: url(/images/menu-6.jpg);"></div>
                     <div class="desc pl-3">
                         <div class="d-flex text align-items-center">
                             <h3><span>Ultimate Overload</span></h3>
@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu-7.jpg);"></div>
+                    <div class="img" style="background-image: url(/images/menu-7.jpg);"></div>
                     <div class="desc pl-3">
                         <div class="d-flex text align-items-center">
                             <h3><span>Grilled Beef with potatoes</span></h3>
@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="pricing-entry d-flex ftco-animate">
-                    <div class="img" style="background-image: url(images/menu-8.jpg);"></div>
+                    <div class="img" style="background-image: url(/images/menu-8.jpg);"></div>
                     <div class="desc pl-3">
                         <div class="d-flex text align-items-center">
                             <h3><span>Ham &amp; Pineapple</span></h3>
@@ -169,35 +169,35 @@
         </div>
         <div class="row no-gutters">
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-1.jpg" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                <a href="/images/insta-1.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-1.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-2.jpg" class="insta-img image-popup" style="background-image: url(images/insta-2.jpg);">
+                <a href="/images/insta-2.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-2.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-3.jpg" class="insta-img image-popup" style="background-image: url(images/insta-3.jpg);">
+                <a href="/images/insta-3.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-3.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-4.jpg" class="insta-img image-popup" style="background-image: url(images/insta-4.jpg);">
+                <a href="/images/insta-4.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-4.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-5.jpg" class="insta-img image-popup" style="background-image: url(images/insta-5.jpg);">
+                <a href="/images/insta-5.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-5.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>

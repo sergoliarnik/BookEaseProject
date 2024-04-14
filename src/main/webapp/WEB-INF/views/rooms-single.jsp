@@ -11,7 +11,7 @@
 
 <jsp:include page="includes/header.jsp"/>
 
-<div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
+<div class="hero-wrap" style="background-image: url('/images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
@@ -35,13 +35,13 @@
                         <h2 class="mb-4">Family Room</h2>
                         <div class="single-slider owl-carousel">
                             <div class="item">
-                                <div class="room-img" style="background-image: url(images/room-1.jpg);"></div>
+                                <div class="room-img" style="background-image: url(/images/room-1.jpg);"></div>
                             </div>
                             <div class="item">
-                                <div class="room-img" style="background-image: url(images/room-2.jpg);"></div>
+                                <div class="room-img" style="background-image: url(/images/room-2.jpg);"></div>
                             </div>
                             <div class="item">
-                                <div class="room-img" style="background-image: url(images/room-3.jpg);"></div>
+                                <div class="room-img" style="background-image: url(/images/room-3.jpg);"></div>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                         <h3 class="mb-4">Take A Tour</h3>
                         <div class="block-16">
                             <figure>
-                                <img src="images/room-4.jpg" alt="Image placeholder" class="img-fluid">
+                                <img src="/images/room-4.jpg" alt="Image placeholder" class="img-fluid">
                                 <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="icon-play"></span></a>
                             </figure>
                         </div>
@@ -113,7 +113,7 @@
                         <div class="row">
                             <div class="col-sm col-md-6 ftco-animate">
                                 <div class="room">
-                                    <a href="rooms.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/room-1.jpg);">
+                                    <a href="rooms.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/images/room-1.jpg);">
                                         <div class="icon d-flex justify-content-center align-items-center">
                                             <span class="icon-search2"></span>
                                         </div>
@@ -128,7 +128,7 @@
                             </div>
                             <div class="col-sm col-md-6 ftco-animate">
                                 <div class="room">
-                                    <a href="rooms.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/room-2.jpg);">
+                                    <a href="rooms.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/images/room-2.jpg);">
                                         <div class="icon d-flex justify-content-center align-items-center">
                                             <span class="icon-search2"></span>
                                         </div>
@@ -170,7 +170,7 @@
                 <div class="sidebar-box ftco-animate">
                     <h3>Recent Blog</h3>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                        <a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                             <div class="meta">
@@ -181,7 +181,7 @@
                         </div>
                     </div>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                        <a class="blog-img mr-4" style="background-image: url(/images/image_2.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                             <div class="meta">
@@ -192,7 +192,7 @@
                         </div>
                     </div>
                     <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
+                        <a class="blog-img mr-4" style="background-image: url(/images/image_3.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                             <div class="meta">
@@ -237,35 +237,35 @@
         </div>
         <div class="row no-gutters">
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-1.jpg" class="insta-img image-popup" style="background-image: url(images/insta-1.jpg);">
+                <a href="/images/insta-1.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-1.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-2.jpg" class="insta-img image-popup" style="background-image: url(images/insta-2.jpg);">
+                <a href="/images/insta-2.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-2.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-3.jpg" class="insta-img image-popup" style="background-image: url(images/insta-3.jpg);">
+                <a href="/images/insta-3.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-3.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-4.jpg" class="insta-img image-popup" style="background-image: url(images/insta-4.jpg);">
+                <a href="/images/insta-4.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-4.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="images/insta-5.jpg" class="insta-img image-popup" style="background-image: url(images/insta-5.jpg);">
+                <a href="/images/insta-5.jpg" class="insta-img image-popup" style="background-image: url(/images/insta-5.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="icon-instagram align-self-center"></span>
                     </div>

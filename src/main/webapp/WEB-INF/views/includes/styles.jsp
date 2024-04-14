@@ -8,19 +8,19 @@
 <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />--%>
 <%--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />--%>
 
-<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css"/>
-<link rel="stylesheet" href="css/animate.css"/>
-<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-<link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-<link rel="stylesheet" href="css/magnific-popup.css"/>
-<link rel="stylesheet" href="css/aos.css"/>
-<link rel="stylesheet" href="css/ionicons.min.css"/>
-<link rel="stylesheet" href="css/bootstrap-datepicker.css"/>
-<link rel="stylesheet" href="css/jquery.timepicker.css"/>
+<link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/animate.css"/>
+<link rel="stylesheet" href="/css/owl.carousel.min.css"/>
+<link rel="stylesheet" href="/css/owl.theme.default.min.css"/>
+<link rel="stylesheet" href="/css/magnific-popup.css"/>
+<link rel="stylesheet" href="/css/aos.css"/>
+<link rel="stylesheet" href="/css/ionicons.min.css"/>
+<link rel="stylesheet" href="/css/bootstrap-datepicker.css"/>
+<link rel="stylesheet" href="/css/jquery.timepicker.css"/>
 
 <%--<link rel="stylesheet" href="css/bootstrap.min.css"/>--%>
-<link rel="stylesheet" href="css/flaticon.css"/>
-<link rel="stylesheet" href="css/icomoon.css"/>
-<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="/css/flaticon.css"/>
+<link rel="stylesheet" href="/css/icomoon.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
