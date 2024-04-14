@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -60,6 +61,14 @@ public class WebController {
     public ModelAndView rooms() {
         Pageable pageable = PageRequest.of(0, 10_000_000);
         Page<Room> rooms = roomService.findAll(pageable);
+        return new ModelAndView("rooms")
+                .addObject(rooms.getContent());
+    }
+
+    @GetMapping("/hotels/{hotelId}/rooms")
+    public ModelAndView hotelRooms(@PathVariable String hotelId) {
+        Pageable pageable = PageRequest.of(0, 10_000_000);
+        Page<Room> rooms = roomService.findAllByHotelId(hotelId, pageable);
         return new ModelAndView("rooms")
                 .addObject(rooms.getContent());
     }
