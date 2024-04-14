@@ -72,7 +72,7 @@
                                     <label for="#">Room</label>
                                     <div class="form-field">
                                         <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                            <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                             <select name="" id="" class="form-control">
                                                 <option value="">Suite</option>
                                                 <option value="">Family Room</option>
@@ -92,7 +92,7 @@
                                     <label for="#">Customer</label>
                                     <div class="form-field">
                                         <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                            <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                             <select name="" id="" class="form-control">
                                                 <option value="">1 Adult</option>
                                                 <option value="">2 Adult</option>
@@ -112,7 +112,7 @@
                                     <label for="#">Where</label>
                                     <div class="form-field">
                                         <div class="select-wrap">
-                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                            <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                             <select name="" id="" class="form-control">
                                                 <option value="">Uzhhorod</option>
                                                 <option value="">Mukachevo</option>
@@ -144,7 +144,7 @@
                  style="background-image: url(images/bg_2.jpg);">
                 <a href="https://vimeo.com/45830194"
                    class="icon popup-vimeo d-flex justify-content-center align-items-center">
-                    <span class="icon-play"></span>
+                    <span><i class="fa-solid fa-play"></i></span>
                 </a>
             </div>
             <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
@@ -166,10 +166,9 @@
                         road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her
                         way.</p>
                     <ul class="ftco-social d-flex">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span><i class="fa-brands fa-x-twitter"></i></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span><i class="fa-brands fa-facebook"></i></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span><i class="fa-brands fa-instagram"></i></span></a></li>
                     </ul>
                 </div>
             </div>
@@ -184,7 +183,7 @@
                 <div class="media block-6 services py-4 d-block text-center">
                     <div class="d-flex justify-content-center">
                         <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-reception-bell"></span>
+                            <span><i class="fa-regular fa-bell"></i></span>
                         </div>
                     </div>
                     <div class="media-body p-2 mt-2">
@@ -197,7 +196,7 @@
                 <div class="media block-6 services py-4 d-block text-center">
                     <div class="d-flex justify-content-center">
                         <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-serving-dish"></span>
+                            <span><i class="fa-solid fa-bowl-food"></i></span>
                         </div>
                     </div>
                     <div class="media-body p-2 mt-2">
@@ -210,7 +209,7 @@
                 <div class="media block-6 services py-4 d-block text-center">
                     <div class="d-flex justify-content-center">
                         <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-car"></span>
+                            <span><i class="fa-solid fa-car"></i></span>
                         </div>
                     </div>
                     <div class="media-body p-2 mt-2">
@@ -223,7 +222,7 @@
                 <div class="media block-6 services py-4 d-block text-center">
                     <div class="d-flex justify-content-center">
                         <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="flaticon-spa"></span>
+                            <span><i class="fa-solid fa-spa"></i></span>
                         </div>
                     </div>
                     <div class="media-body p-2 mt-2">
@@ -256,8 +255,7 @@
                     <div class="text p-3 text-center">
                         <h3 class="mb-3"><a href="rooms">${hotel.name}</a></h3>
                         <hr>
-                        <p class="pt-1"><a href="rooms" class="btn-custom">${hotel.name} <span
-                                class="icon-long-arrow-right"></span></a></p>
+                        <p class="pt-1"><a href="rooms" class="btn-custom">${hotel.name} <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
                     </div>
                 </div>
             </div>
@@ -321,7 +319,7 @@
                                 <div class="testimony-wrap py-4 pb-5">
                                     <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
+		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
                                     </div>
                                     <div class="text text-center">
@@ -337,7 +335,7 @@
                                 <div class="testimony-wrap py-4 pb-5">
                                     <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
+		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
                                     </div>
                                     <div class="text text-center">
@@ -353,7 +351,7 @@
                                 <div class="testimony-wrap py-4 pb-5">
                                     <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
+		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
                                     </div>
                                     <div class="text text-center">
@@ -369,7 +367,7 @@
                                 <div class="testimony-wrap py-4 pb-5">
                                     <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
+		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
                                     </div>
                                     <div class="text text-center">
@@ -385,7 +383,7 @@
                                 <div class="testimony-wrap py-4 pb-5">
                                     <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
 		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="icon-quote-left"></i>
+		                      <i class="fa-solid fa-quote-left"></i>
 		                    </span>
                                     </div>
                                     <div class="text text-center">
@@ -424,7 +422,7 @@
                         <div class="meta mb-3">
                             <div><a href="#">Dec 6, 2018</a></div>
                             <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                            <div><a href="#" class="meta-chat"><span><i class="fa-regular fa-message"></i></span> 3</a></div>
                         </div>
                     </div>
                 </div>
@@ -439,7 +437,7 @@
                         <div class="meta mb-3">
                             <div><a href="#">Dec 6, 2018</a></div>
                             <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                            <div><a href="#" class="meta-chat"><span><i class="fa-regular fa-message"></i></span> 3</a></div>
                         </div>
                     </div>
                 </div>
@@ -454,7 +452,7 @@
                         <div class="meta mb-3">
                             <div><a href="#">Dec 6, 2018</a></div>
                             <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                            <div><a href="#" class="meta-chat"><span><i class="fa-regular fa-message"></i></span> 3</a></div>
                         </div>
                     </div>
                 </div>
@@ -469,7 +467,7 @@
                         <div class="meta mb-3">
                             <div><a href="#">Dec 6, 2018</a></div>
                             <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                            <div><a href="#" class="meta-chat"><span><i class="fa-regular fa-message"></i></span> 3</a></div>
                         </div>
                     </div>
                 </div>
