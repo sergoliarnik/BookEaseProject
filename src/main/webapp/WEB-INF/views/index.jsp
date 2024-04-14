@@ -113,9 +113,9 @@
                                         <div class="select-wrap">
                                             <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                             <select name="" id="" class="form-control">
-                                                <option value="">Uzhhorod</option>
-                                                <option value="">Mukachevo</option>
-                                                <option value="">Khust</option>
+                                                <c:forEach items="${cities}" var="city">
+                                                <option value="">${city}</option>
+                                                </c:forEach>
                                             </select>
                                         </div>
                                     </div>

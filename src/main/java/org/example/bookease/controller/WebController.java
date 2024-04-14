@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Controller
 @RequiredArgsConstructor
 public class WebController {
@@ -23,8 +25,12 @@ public class WebController {
     public ModelAndView index() {
         Pageable pageable = PageRequest.of(0, 10_000_000);
         Page<Hotel> hotels = hotelService.findAll(pageable);
+
+        List<String> cities = hotelService.findAllHotelsCities();
+
         return new ModelAndView("index")
-                .addObject(hotels.getContent());
+                .addObject(hotels.getContent())
+                .addObject("cities", cities);
     }
 
     @GetMapping("/about")
