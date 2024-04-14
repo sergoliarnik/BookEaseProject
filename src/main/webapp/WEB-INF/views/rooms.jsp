@@ -37,7 +37,7 @@
                         <div class="room">
                             <a href="rooms-single" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
                                 <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="icon-search2"></span>
+                                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
                                 </div>
                             </a>
                             <div class="text p-3 text-center">

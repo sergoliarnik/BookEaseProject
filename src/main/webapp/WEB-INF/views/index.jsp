@@ -249,7 +249,7 @@
                     <a href="/hotels/${hotel.id}/rooms" class="img d-flex justify-content-center align-items-center"
                        style='background-image: url(${hotel.imageUrl});'>
                         <div class="icon d-flex justify-content-center align-items-center">
-                            <span class="icon-search2"></span>
+                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
                         </div>
                     </a>
                     <div class="text p-3 text-center">
