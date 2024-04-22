@@ -49,7 +49,7 @@
                                     <li><span>Bed:</span> ${room.beds}</li>
                                 </ul>
                                 <hr>
-                                <p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
+                                <p class="pt-1"><a href="rooms-single" class="btn-custom">Book Now <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
                             </div>
                         </div>
                     </div>
