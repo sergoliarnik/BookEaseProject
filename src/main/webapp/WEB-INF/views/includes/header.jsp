@@ -13,6 +13,7 @@
                 <li class="nav-item"><a href="about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
                 <li class="nav-item"><a href="contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="register" class="nav-link">Register</a></li>
             </ul>
         </div>
     </div>

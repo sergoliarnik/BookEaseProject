@@ -1,25 +1,33 @@
 package org.example.bookease.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.example.bookease.dto.RegisterUserDto;
 import org.example.bookease.entity.Hotel;
 import org.example.bookease.entity.Room;
+import org.example.bookease.entity.User;
+import org.example.bookease.entity.UserRole;
 import org.example.bookease.service.HotelService;
 import org.example.bookease.service.RoomService;
+import org.example.bookease.service.UserService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 @RequiredArgsConstructor
 public class WebController {
     private final HotelService hotelService;
     private final RoomService roomService;
+    private final UserService userService;
 
     @GetMapping
     public ModelAndView index() {
@@ -63,6 +71,11 @@ public class WebController {
         return "rooms-single";
     }
 
+    @GetMapping("/register")
+    public ModelAndView register() {
+        return new ModelAndView("register", "registerUserDto", new RegisterUserDto());
+    }
+
     @GetMapping("/rooms")
     public ModelAndView rooms() {
         Pageable pageable = PageRequest.of(0, 10_000_000);
@@ -77,5 +90,19 @@ public class WebController {
         Page<Room> rooms = roomService.findAllByHotelId(hotelId, pageable);
         return new ModelAndView("rooms")
                 .addObject(rooms.getContent());
+    }
+
+    @PostMapping("/user")
+    public String saveUser(@ModelAttribute RegisterUserDto registerUserDto) {
+        User user = new User();
+        user.setId(UUID.randomUUID().toString());
+        user.setName(registerUserDto.getName());
+        user.setSurname(registerUserDto.getSurname());
+        user.setEmail(registerUserDto.getEmail());
+        user.setPassword(registerUserDto.getPassword());
+        user.setRole(UserRole.CUSTOMER);
+
+        userService.save(user);
+        return "redirect:/";
     }
 }
