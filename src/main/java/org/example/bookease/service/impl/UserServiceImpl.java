@@ -3,10 +3,13 @@ package org.example.bookease.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.example.bookease.dto.RegisterUserDto;
 import org.example.bookease.entity.User;
+import org.example.bookease.entity.UserRole;
 import org.example.bookease.mapper.UserMapper;
 import org.example.bookease.repository.UserRepo;
 import org.example.bookease.service.UserService;
 import org.springframework.stereotype.Service;
+
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -17,6 +20,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public void save(RegisterUserDto registerUserDto) {
         User user = userMapper.registerUserDtoToUser(registerUserDto);
+        user.setId(UUID.randomUUID().toString());
+        user.setRole(UserRole.CUSTOMER);
         userRepo.save(user);
     }
 }
