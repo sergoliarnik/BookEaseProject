@@ -1,8 +1,9 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Deluxe - Free Bootstrap 4 Template by Colorlib</title>
+    <title><spring:message code="bookease"/> - <spring:message code="blogs.blog_single"/></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -19,9 +20,9 @@
             <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
                 <div class="text">
                     <p class="breadcrumbs mb-2" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
-                            class="mr-2"><a href="index.html">Home</a></span> <span class="mr-2"><a href="blog.html">Blog</a></span>
-                        <span>Blog Single</span></p>
-                    <h1 class="mb-4 bread">Blog Single</h1>
+                            class="mr-2"><a href="index.html"><spring:message code="navigation.home"/></a></span> <span class="mr-2"><a href="blog.html"><spring:message code="blogs.blog"/></a></span>
+                        <span><spring:message code="blogs.blog_single"/></span></p>
+                    <h1 class="mb-4 bread"><spring:message code="blogs.blog_single"/></h1>
                 </div>
             </div>
         </div>
@@ -226,13 +227,13 @@
                     <form action="#" class="search-form">
                         <div class="form-group">
                             <span class="icon fa fa-search"></span>
-                            <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                            <input type="text" class="form-control" placeholder="<spring:message code="blog_single_page.type_keyword_and_hit_enter"/>">
                         </div>
                     </form>
                 </div>
                 <div class="sidebar-box ftco-animate">
                     <div class="categories">
-                        <h3>Categories</h3>
+                        <h3><spring:message code="blogs.categories"/></h3>
                         <li><a href="#">Properties <span>(12)</span></a></li>
                         <li><a href="#">Home <span>(22)</span></a></li>
                         <li><a href="#">House <span>(37)</span></a></li>
@@ -243,7 +244,7 @@
                 </div>
 
                 <div class="sidebar-box ftco-animate">
-                    <h3>Recent Blog</h3>
+                    <h3><spring:message code="blogs.recent_blog"/></h3>
                     <div class="block-21 mb-4 d-flex">
                         <a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
                         <div class="text">

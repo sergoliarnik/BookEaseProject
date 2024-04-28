@@ -1,10 +1,11 @@
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Deluxe Hotel</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <h2 class="ftco-heading-2"><spring:message code="page.footer.bookease_hotel"/></h2>
+                    <p><spring:message code="page.footer.hotel_description"/></p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#"><span><i class="fa-brands fa-x-twitter"></i></span></a></li>
                         <li class="ftco-animate"><a href="#"><span><i class="fa-brands fa-facebook"></i></span></a></li>
@@ -14,29 +15,38 @@
             </div>
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4 ml-md-5">
-                    <h2 class="ftco-heading-2">Useful Links</h2>
+                    <h2 class="ftco-heading-2"><spring:message code="page.footer.useful_links"/></h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">Blog</a></li>
-                        <li><a href="#" class="py-2 d-block">Rooms</a></li>
-                        <li><a href="#" class="py-2 d-block">Amenities</a></li>
-                        <li><a href="#" class="py-2 d-block">Gift Card</a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="blogs.blog"/></a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="rooms"/></a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.useful_links.amenities"/></a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.useful_links.gift_card"/></a></li>
+                        <li>
+                                <a href="#" class="nav-link dropdown-toggle text-sm show" style="padding: 0;" data-toggle="dropdown" aria-expanded="false">
+                                Language
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end mt-sm-3 shadow-sm" style="background: inherit" aria-labelledby="languages">
+                                <li><a class="dropdown-item" href="?lang=uk" style="background: #232323">Ukrainian</a></li>
+                                <li><a class="dropdown-item" href="?lang=en" style="background: #232323">English</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Privacy</h2>
+                    <h2 class="ftco-heading-2"><spring:message code="page.footer.privacy"/></h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">Career</a></li>
-                        <li><a href="#" class="py-2 d-block">About Us</a></li>
-                        <li><a href="#" class="py-2 d-block">Contact Us</a></li>
-                        <li><a href="#" class="py-2 d-block">Services</a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.privacy.career"/></a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.privacy.about_us"/></a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.privacy.contact_us"/></a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.privacy.services"/></a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <h2 class="ftco-heading-2"><spring:message code="page.footer.have_a_questions"/>?</h2>
                     <div class="block-23 mb-3">
                         <ul>
                             <li><span class="icon"><i class="fa-solid fa-location-dot"></i></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>

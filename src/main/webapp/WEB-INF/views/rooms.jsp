@@ -1,9 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Deluxe - Free Bootstrap 4 Template by Colorlib</title>
+    <title><spring:message code="bookease"/> - <spring:message code="rooms"/></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -19,8 +20,8 @@
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
                 <div class="text">
-                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-                    <h1 class="mb-4 bread">Rooms</h1>
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html"><spring:message code="navigation.home"/></a></span> <span><spring:message code="navigation.about"/></span></p>
+                    <h1 class="mb-4 bread"><spring:message code="rooms"/></h1>
                 </div>
             </div>
         </div>
@@ -44,13 +45,13 @@
                             </a>
                             <div class="text p-3 text-center">
                                 <h3 class="mb-3"><a href="rooms-single">${room.type}</a></h3>
-                                <p><span class="price mr-2">$${room.pricePerNight}</span> <span class="per">per night</span></p>
+                                <p><span class="price mr-2">$${room.pricePerNight}</span> <span class="per"><spring:message code="rooms_page.per_night"/></span></p>
                                 <ul class="list">
-                                    <li><span>Max:</span> ${room.maxPeople} Persons</li>
-                                    <li><span>Bed:</span> ${room.beds}</li>
+                                    <li><span><spring:message code="rooms.max"/>:</span> ${room.maxPeople} <spring:message code="rooms.persons"/></li>
+                                    <li><span><spring:message code="rooms.bed"/>:</span> ${room.beds}</li>
                                 </ul>
                                 <hr>
-                                <p class="pt-1"><a href="rooms-single" class="btn-custom">Book Now <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
+                                <p class="pt-1"><a href="rooms-single" class="btn-custom"><spring:message code="rooms.book_now"/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
                             </div>
                         </div>
                     </div>
@@ -59,26 +60,26 @@
             </div>
             <div class="col-lg-3 sidebar">
                 <div class="sidebar-wrap bg-light ftco-animate">
-                    <h3 class="heading mb-4">Advanced Search</h3>
+                    <h3 class="heading mb-4"><spring:message code="rooms_page.advanced_search"/></h3>
                     <form action="#">
                         <div class="fields">
                             <div class="form-group">
-                                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Check In Date">
+                                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="<spring:message code='rooms.check_in_date'/>">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="checkin_date" class="form-control checkout_date" placeholder="Check Out Date">
+                                <input type="text" id="checkin_date" class="form-control checkout_date" placeholder="<spring:message code='rooms.check_out_date'/>">
                             </div>
                             <div class="form-group">
                                 <div class="select-wrap one-third">
                                     <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                     <select name="" id="" class="form-control">
-                                        <option value="">Room Type</option>
-                                        <option value="">Suite</option>
-                                        <option value="">Family Room</option>
-                                        <option value="">Deluxe Room</option>
-                                        <option value="">Classic Room</option>
-                                        <option value="">Superior Room</option>
-                                        <option value="">Luxury Room</option>
+                                        <option value=""><spring:message code="rooms.room_type"/></option>
+                                        <option value=""><spring:message code="rooms.suite"/></option>
+                                        <option value=""><spring:message code="rooms.family_room"/></option>
+                                        <option value=""><spring:message code="rooms.deluxe_room"/></option>
+                                        <option value=""><spring:message code="rooms.classic_room"/></option>
+                                        <option value=""><spring:message code="rooms.superior_room"/></option>
+                                        <option value=""><spring:message code="rooms.luxury_room"/></option>
                                     </select>
                                 </div>
                             </div>
@@ -86,13 +87,13 @@
                                 <div class="select-wrap one-third">
                                     <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                     <select name="" id="" class="form-control">
-                                        <option value="">0 Adult</option>
-                                        <option value="">1 Adult</option>
-                                        <option value="">2 Adult</option>
-                                        <option value="">3 Adult</option>
-                                        <option value="">4 Adult</option>
-                                        <option value="">5 Adult</option>
-                                        <option value="">6 Adult</option>
+                                        <option value="">0 <spring:message code="rooms.adult"/></option>
+                                        <option value="">1 <spring:message code="rooms.adult"/></option>
+                                        <option value="">2 <spring:message code="rooms.adult"/></option>
+                                        <option value="">3 <spring:message code="rooms.adult"/></option>
+                                        <option value="">4 <spring:message code="rooms.adult"/></option>
+                                        <option value="">5 <spring:message code="rooms.adult"/></option>
+                                        <option value="">6 <spring:message code="rooms.adult"/></option>
                                     </select>
                                 </div>
                             </div>
@@ -100,13 +101,13 @@
                                 <div class="select-wrap one-third">
                                     <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                     <select name="" id="" class="form-control">
-                                        <option value="">0 Children</option>
-                                        <option value="">1 Children</option>
-                                        <option value="">2 Children</option>
-                                        <option value="">3 Children</option>
-                                        <option value="">4 Children</option>
-                                        <option value="">5 Children</option>
-                                        <option value="">6 Children</option>
+                                        <option value="">0 <spring:message code="rooms.children"/></option>
+                                        <option value="">1 <spring:message code="rooms.children"/></option>
+                                        <option value="">2 <spring:message code="rooms.children"/></option>
+                                        <option value="">3 <spring:message code="rooms.children"/></option>
+                                        <option value="">4 <spring:message code="rooms.children"/></option>
+                                        <option value="">5 <spring:message code="rooms.children"/></option>
+                                        <option value="">6 <spring:message code="rooms.children"/></option>
                                     </select>
                                 </div>
                             </div>
@@ -128,7 +129,7 @@
                     </form>
                 </div>
                 <div class="sidebar-wrap bg-light ftco-animate">
-                    <h3 class="heading mb-4">Star Rating</h3>
+                    <h3 class="heading mb-4"><spring:message code="rooms_page.star_rating"/></h3>
                     <form method="post" class="star-rating">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">

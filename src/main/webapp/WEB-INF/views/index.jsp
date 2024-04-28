@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Deluxe - Free Bootstrap 4 Template by Colorlib</title>
+    <title><spring:message code="bookease"/></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -21,8 +21,8 @@
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-12 ftco-animate text-center">
                     <div class="text mb-5 pb-3">
-                        <h1 class="mb-3"><spring:message code="test"/></h1>
-                        <h2>Hotels &amp; Resorts</h2>
+                        <h1 class="mb-3"><spring:message code="index_page.welcome_to_bookease"/></h1>
+                        <h2><spring:message code="hotels"/></h2>
                     </div>
                 </div>
             </div>
@@ -35,8 +35,8 @@
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-12 ftco-animate text-center">
                     <div class="text mb-5 pb-3">
-                        <h1 class="mb-3">Enjoy A Luxury Experience</h1>
-                        <h2>Join With Us</h2>
+                        <h1 class="mb-3"><spring:message code="index_page.enjoy_luxury_experience"/></h1>
+                        <h2><spring:message code="index_page.join_with_us"/></h2>
                     </div>
                 </div>
             </div>
@@ -53,33 +53,33 @@
                         <div class="col-md-3 d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#">Check-in Date</label>
-                                    <input type="text" class="form-control checkin_date" placeholder="Check-in date">
+                                    <label for="#"><spring:message code="rooms.check_in_date"/></label>
+                                    <input type="text" class="form-control checkin_date" placeholder="<spring:message code='rooms.check_in_date'/>">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#">Check-out Date</label>
-                                    <input type="text" class="form-control checkout_date" placeholder="Check-out date">
+                                    <label for="#"><spring:message code="rooms.check_out_date"/></label>
+                                    <input type="text" class="form-control checkout_date" placeholder="<spring:message code='rooms.check_out_date'/>">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#">Room</label>
+                                    <label for="#"><spring:message code="rooms.room"/></label>
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                             <select name="" id="" class="form-control">
-                                                <option value="">Suite</option>
-                                                <option value="">Family Room</option>
-                                                <option value="">Deluxe Room</option>
-                                                <option value="">Classic Room</option>
-                                                <option value="">Superior Room</option>
-                                                <option value="">Luxury Room</option>
+                                                <option value=""><spring:message code="rooms.suite"/></option>
+                                                <option value=""><spring:message code="rooms.family_room"/></option>
+                                                <option value=""><spring:message code="rooms.deluxe_room"/></option>
+                                                <option value=""><spring:message code="rooms.classic_room"/></option>
+                                                <option value=""><spring:message code="rooms.superior_room"/></option>
+                                                <option value=""><spring:message code="rooms.luxury_room"/></option>
                                             </select>
                                         </div>
                                     </div>
@@ -89,17 +89,17 @@
                         <div class="col-md d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#">Customer</label>
+                                    <label for="#"><spring:message code="rooms.customer"/></label>
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                             <select name="" id="" class="form-control">
-                                                <option value="">1 Adult</option>
-                                                <option value="">2 Adult</option>
-                                                <option value="">3 Adult</option>
-                                                <option value="">4 Adult</option>
-                                                <option value="">5 Adult</option>
-                                                <option value="">6 Adult</option>
+                                                <option value="">1 <spring:message code="rooms.adult"/></option>
+                                                <option value="">2 <spring:message code="rooms.adult"/></option>
+                                                <option value="">3 <spring:message code="rooms.adult"/></option>
+                                                <option value="">4 <spring:message code="rooms.adult"/></option>
+                                                <option value="">5 <spring:message code="rooms.adult"/></option>
+                                                <option value="">6 <spring:message code="rooms.adult"/></option>
                                             </select>
                                         </div>
                                     </div>
@@ -109,7 +109,7 @@
                         <div class="col-md d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#">Where</label>
+                                    <label for="#"><spring:message code="rooms.where"/></label>
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
@@ -125,7 +125,7 @@
                         </div>
                         <div class="col-md d-flex">
                             <div class="form-group d-flex align-self-stretch">
-                                <input type="submit" value="Check Availability"
+                                <input type="submit" value="<spring:message code='rooms.check_availability'/>"
                                        class="btn btn-primary py-3 px-4 align-self-stretch">
                             </div>
                         </div>
@@ -150,21 +150,13 @@
             <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
                 <div class="heading-section heading-section-wo-line pt-md-5 pl-md-5 mb-5">
                     <div class="ml-md-0">
-                        <span class="subheading">Welcome to Deluxe Hotel</span>
-                        <h2 class="mb-4">Welcome To Our Hotels</h2>
+                        <span class="subheading"><spring:message code='index_page.welcome_to_bookease_hotels'/></span>
+                        <h2 class="mb-4"><spring:message code='index_page.welcome_to_our_hotels'/></h2>
                     </div>
                 </div>
                 <div class="pb-md-5">
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it
-                        would have been rewritten a thousand times and everything that was left from its origin would be
-                        the word "and" and the Little Blind Text should turn around and return to its own, safe country.
-                        But nothing the copy said could convince her and so it didn’t take long until a few insidious
-                        Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their
-                        agency, where they abused her for their.</p>
-                    <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline
-                        of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own
-                        road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her
-                        way.</p>
+                    <p><spring:message code='index_page.zakarpattia_description_first_paragraph'/></p>
+                    <p><spring:message code='index_page.zakarpattia_description_second_paragraph'/></p>
                     <ul class="ftco-social d-flex">
                         <li class="ftco-animate"><a href="#"><span><i class="fa-brands fa-x-twitter"></i></span></a></li>
                         <li class="ftco-animate"><a href="#"><span><i class="fa-brands fa-facebook"></i></span></a></li>
@@ -176,70 +168,11 @@
     </div>
 </section>
 
-<section class="ftco-section">
-    <div class="container">
-        <div class="row d-flex">
-            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services py-4 d-block text-center">
-                    <div class="d-flex justify-content-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span><i class="fa-regular fa-bell"></i></span>
-                        </div>
-                    </div>
-                    <div class="media-body p-2 mt-2">
-                        <h3 class="heading mb-3">25/7 Front Desk</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services py-4 d-block text-center">
-                    <div class="d-flex justify-content-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span><i class="fa-solid fa-bowl-food"></i></span>
-                        </div>
-                    </div>
-                    <div class="media-body p-2 mt-2">
-                        <h3 class="heading mb-3">Restaurant Bar</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex align-sel Searchf-stretch ftco-animate">
-                <div class="media block-6 services py-4 d-block text-center">
-                    <div class="d-flex justify-content-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span><i class="fa-solid fa-car"></i></span>
-                        </div>
-                    </div>
-                    <div class="media-body p-2 mt-2">
-                        <h3 class="heading mb-3">Transfer Services</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services py-4 d-block text-center">
-                    <div class="d-flex justify-content-center">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span><i class="fa-solid fa-spa"></i></span>
-                        </div>
-                    </div>
-                    <div class="media-body p-2 mt-2">
-                        <h3 class="heading mb-3">Spa Suites</h3>
-                        <p>A small river named Duden flows by their place and supplies.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 class="mb-4">Our Hotels</h2>
+                <h2 class="mb-4"><spring:message code='hotels.our_hotels'/></h2>
             </div>
         </div>
         <div class="row">
@@ -255,7 +188,7 @@
                     <div class="text p-3 text-center">
                         <h3 class="mb-3"><a href="/hotels/${hotel.id}/rooms">${hotel.name}</a></h3>
                         <hr>
-                        <p class="pt-1"><a href="/hotels/${hotel.id}/rooms" class="btn-custom">Rooms <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
+                        <p class="pt-1"><a href="/hotels/${hotel.id}/rooms" class="btn-custom"><spring:message code='rooms'/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
                     </div>
                 </div>
             </div>
@@ -273,7 +206,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <strong class="number" data-number="50000">0</strong>
-                                <span>Happy Guests</span>
+                                <span><spring:message code="index_page.happy_guests"/></span>
                             </div>
                         </div>
                     </div>
@@ -281,7 +214,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <strong class="number" data-number="3000">0</strong>
-                                <span>Rooms</span>
+                                <span><spring:message code="rooms"/></span>
                             </div>
                         </div>
                     </div>
@@ -289,7 +222,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <strong class="number" data-number="1000">0</strong>
-                                <span>Staffs</span>
+                                <span><spring:message code="index_page.staffs"/></span>
                             </div>
                         </div>
                     </div>
@@ -297,7 +230,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <strong class="number" data-number="100">0</strong>
-                                <span>Destination</span>
+                                <span><spring:message code="index_page.destination"/></span>
                             </div>
                         </div>
                     </div>
@@ -306,109 +239,12 @@
         </div>
     </div>
 </section>
-
-
-<section class="ftco-section testimony-section bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8 ftco-animate">
-                <div class="row ftco-animate">
-                    <div class="col-md-12">
-                        <div class="carousel-testimony owl-carousel ftco-owl">
-                            <div class="item">
-                                <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(/images/person_1.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="fa-solid fa-quote-left"></i>
-		                    </span>
-                                    </div>
-                                    <div class="text text-center">
-                                        <p class="mb-4">A small river named Duden flows by their place and supplies it
-                                            with the necessary regelialia. It is a paradisematic country, in which
-                                            roasted parts of sentences fly into your mouth.</p>
-                                        <p class="name">Nathan Smith</p>
-                                        <span class="position">Guests</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(/images/person_2.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="fa-solid fa-quote-left"></i>
-		                    </span>
-                                    </div>
-                                    <div class="text text-center">
-                                        <p class="mb-4">A small river named Duden flows by their place and supplies it
-                                            with the necessary regelialia. It is a paradisematic country, in which
-                                            roasted parts of sentences fly into your mouth.</p>
-                                        <p class="name">Nathan Smith</p>
-                                        <span class="position">Guests</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(/images/person_3.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="fa-solid fa-quote-left"></i>
-		                    </span>
-                                    </div>
-                                    <div class="text text-center">
-                                        <p class="mb-4">A small river named Duden flows by their place and supplies it
-                                            with the necessary regelialia. It is a paradisematic country, in which
-                                            roasted parts of sentences fly into your mouth.</p>
-                                        <p class="name">Nathan Smith</p>
-                                        <span class="position">Guests</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(/images/person_1.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="fa-solid fa-quote-left"></i>
-		                    </span>
-                                    </div>
-                                    <div class="text text-center">
-                                        <p class="mb-4">A small river named Duden flows by their place and supplies it
-                                            with the necessary regelialia. It is a paradisematic country, in which
-                                            roasted parts of sentences fly into your mouth.</p>
-                                        <p class="name">Nathan Smith</p>
-                                        <span class="position">Guests</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimony-wrap py-4 pb-5">
-                                    <div class="user-img mb-4" style="background-image: url(/images/person_1.jpg)">
-		                    <span class="quote d-flex align-items-center justify-content-center">
-		                      <i class="fa-solid fa-quote-left"></i>
-		                    </span>
-                                    </div>
-                                    <div class="text text-center">
-                                        <p class="mb-4">A small river named Duden flows by their place and supplies it
-                                            with the necessary regelialia. It is a paradisematic country, in which
-                                            roasted parts of sentences fly into your mouth.</p>
-                                        <p class="name">Nathan Smith</p>
-                                        <span class="position">Guests</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2>Recent Blog</h2>
+                <h2><spring:message code="blogs.recent_blog"/></h2>
             </div>
         </div>
         <div class="row d-flex">
