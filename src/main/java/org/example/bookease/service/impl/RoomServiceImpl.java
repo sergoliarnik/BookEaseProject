@@ -1,27 +1,38 @@
 package org.example.bookease.service.impl;
 
+import lombok.RequiredArgsConstructor;
+import org.example.bookease.dto.RoomDto;
 import org.example.bookease.entity.Room;
+import org.example.bookease.mapper.RoomMapper;
+import org.example.bookease.repository.HotelRepo;
 import org.example.bookease.repository.RoomRepo;
 import org.example.bookease.service.HotelService;
 import org.example.bookease.service.RoomService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-@Service
-public class RoomServiceImpl extends AbstractCrudServiceImpl<Room> implements RoomService {
-    private final HotelService hotelService;
-    private final RoomRepo roomRepo;
+import java.util.List;
+import java.util.NoSuchElementException;
 
-    protected RoomServiceImpl(RoomRepo roomRepo, HotelService hotelService) {
-        super(roomRepo);
-        this.hotelService = hotelService;
-        this.roomRepo = roomRepo;
+@Service
+@RequiredArgsConstructor
+public class RoomServiceImpl implements RoomService {
+    private final RoomRepo roomRepo;
+    private final RoomMapper roomMapper;
+    private final HotelRepo hotelRepo;
+
+    @Override
+    public List<RoomDto> findAll() {
+        List<Room> rooms = roomRepo.findAll();
+        return rooms.stream().map(roomMapper::roomToRoomDto).toList();
     }
 
     @Override
-    public Page<Room> findAllByHotelId(String hotelId, Pageable pageable) {
-        hotelService.findById(hotelId);
-        return roomRepo.findAllByHotelId(hotelId, pageable);
+    public List<RoomDto> findAllByHotelId(String hotelId) {
+        if (!hotelRepo.existsById(hotelId)) {
+            throw new NoSuchElementException("Hotel with id " + hotelId + "not found");
+        }
+
+        List<Room> rooms = roomRepo.findAllByHotelId(hotelId);
+        return rooms.stream().map(roomMapper::roomToRoomDto).toList();
     }
 }

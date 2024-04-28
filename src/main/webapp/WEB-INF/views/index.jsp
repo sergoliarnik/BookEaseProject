@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,7 @@
             <div class="row no-gutters slider-text align-items-center justify-content-center">
                 <div class="col-md-12 ftco-animate text-center">
                     <div class="text mb-5 pb-3">
-                        <h1 class="mb-3">Welcome To Deluxe</h1>
+                        <h1 class="mb-3"><spring:message code="test"/></h1>
                         <h2>Hotels &amp; Resorts</h2>
                     </div>
                 </div>
@@ -242,7 +243,7 @@
             </div>
         </div>
         <div class="row">
-            <c:forEach var="hotel" items="${hotelList}">
+            <c:forEach var="hotel" items="${hotels}">
             <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                 <div class="room">
                     <a href="/hotels/${hotel.id}/rooms" class="img d-flex justify-content-center align-items-center"

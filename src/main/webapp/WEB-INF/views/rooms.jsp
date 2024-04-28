@@ -33,7 +33,8 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="row">
-                    <c:forEach items="${roomList}" var="room">
+                    <script>console.log("${rooms}")</script>
+                    <c:forEach items="${rooms}" var="room">
                     <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                         <div class="room">
                             <a href="rooms-single" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">

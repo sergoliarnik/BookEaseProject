@@ -1,6 +1,8 @@
 package org.example.bookease.service;
 
-import org.example.bookease.entity.User;
+import org.example.bookease.dto.RegisterUserDto;
 
-public interface UserService extends CrudService<User>{
+public interface UserService {
+
+    void save(RegisterUserDto registerUserDto);
 }

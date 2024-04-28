@@ -1,9 +1,12 @@
 package org.example.bookease.service;
 
-import org.example.bookease.entity.Hotel;
+import org.example.bookease.dto.HotelDto;
 
 import java.util.List;
 
-public interface HotelService extends CrudService<Hotel> {
+public interface HotelService {
+
+    List<HotelDto> findAll();
+
     List<String> findAllHotelsCities();
 }

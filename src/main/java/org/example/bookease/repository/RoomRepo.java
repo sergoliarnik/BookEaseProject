@@ -1,12 +1,12 @@
 package org.example.bookease.repository;
 
 import org.example.bookease.entity.Room;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface RoomRepo extends JpaRepository<Room, String> {
-    Page<Room> findAllByHotelId(String hotelId, Pageable pageable);
+    List<Room> findAllByHotelId(String hotelId);
 }
