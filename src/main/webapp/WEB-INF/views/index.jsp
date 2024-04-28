@@ -74,12 +74,9 @@
                                         <div class="select-wrap">
                                             <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
                                             <select name="" id="" class="form-control">
-                                                <option value=""><spring:message code="rooms.suite"/></option>
-                                                <option value=""><spring:message code="rooms.family_room"/></option>
-                                                <option value=""><spring:message code="rooms.deluxe_room"/></option>
-                                                <option value=""><spring:message code="rooms.classic_room"/></option>
-                                                <option value=""><spring:message code="rooms.superior_room"/></option>
-                                                <option value=""><spring:message code="rooms.luxury_room"/></option>
+                                                <c:forEach var="roomType" items="${roomTypes}">
+                                                    <option value="${roomType}">${roomType}</option>
+                                                </c:forEach>
                                             </select>
                                         </div>
                                     </div>
