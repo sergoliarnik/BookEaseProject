@@ -120,7 +120,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md d-flex">
+                        <div class="col-md d-flex" style="margin-top: 20px">
                             <div class="form-group d-flex align-self-stretch">
                                 <input type="submit" value="<spring:message code='rooms.check_availability'/>"
                                        class="btn btn-primary py-3 px-4 align-self-stretch">
