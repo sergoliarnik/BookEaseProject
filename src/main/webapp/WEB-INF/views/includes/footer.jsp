@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container">
@@ -22,11 +23,18 @@
                         <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.useful_links.amenities"/></a></li>
                         <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.useful_links.gift_card"/></a></li>
                         <li>
-                                <a href="#" class="nav-link dropdown-toggle text-sm show" style="padding: 0;" data-toggle="dropdown" aria-expanded="false">
-                                Language
+                            <%
+                                java.util.Locale locale = pageContext.getResponse().getLocale();
+                                String languageName = locale.getDisplayLanguage(locale);
+                                languageName = languageName.substring(0, 1).toUpperCase() + languageName.substring(1);
+
+                                pageContext.setAttribute("languageName", languageName);
+                            %>
+                            <a href="#" class="py-2 d-block nav-link dropdown-toggle text-sm show" style="padding: 0;" data-toggle="dropdown" aria-expanded="false">
+                                ${languageName}
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end mt-sm-3 shadow-sm" style="background: inherit" aria-labelledby="languages">
-                                <li><a class="dropdown-item" href="?lang=uk" style="background: #232323">Ukrainian</a></li>
+                                <li><a class="dropdown-item" href="?lang=uk" style="background: #232323">Українська</a></li>
                                 <li><a class="dropdown-item" href="?lang=en" style="background: #232323">English</a></li>
                             </ul>
                         </li>
