@@ -1,4 +1,5 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="index">Deluxe</a>
@@ -13,7 +14,13 @@
                 <li class="nav-item"><a href="restaurant" class="nav-link"><spring:message code="restaurant.restaurant"/></a></li>
                 <li class="nav-item"><a href="blog" class="nav-link"><spring:message code="blogs.blog"/></a></li>
                 <li class="nav-item"><a href="contact" class="nav-link"><spring:message code="navigation.contact"/></a></li>
-                <li class="nav-item"><a href="register" class="nav-link"><spring:message code="register"/></a></li>
+                <sec:authorize access="!isAuthenticated()">
+                    <li class="nav-item"><a href="login" class="nav-link"><spring:message code="login"/></a></li>
+                    <li class="nav-item"><a href="register" class="nav-link"><spring:message code="register"/></a></li>
+                </sec:authorize>
+                <sec:authorize access="isAuthenticated()">
+                    <li class="nav-item"><a href="logout" class="nav-link"><spring:message code="logout"/></a></li>
+                </sec:authorize>
             </ul>
         </div>
     </div>
