@@ -38,20 +38,20 @@
                     <c:forEach items="${rooms}" var="room">
                     <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                         <div class="room">
-                            <a href="rooms-single" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
+                            <a href="rooms/${room.id}" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
                                 <div class="icon d-flex justify-content-center align-items-center">
                                     <span><i class="fa-solid fa-magnifying-glass"></i></span>
                                 </div>
                             </a>
                             <div class="text p-3 text-center">
-                                <h3 class="mb-3"><a href="rooms-single">${room.type}</a></h3>
+                                <h3 class="mb-3"><a href="rooms/${room.id}">${room.type}</a></h3>
                                 <p><span class="price mr-2">$${room.pricePerNight}</span> <span class="per"><spring:message code="rooms_page.per_night"/></span></p>
                                 <ul class="list">
                                     <li><span><spring:message code="rooms.max"/>:</span> ${room.maxPeople} <spring:message code="rooms.persons"/></li>
                                     <li><span><spring:message code="rooms.bed"/>:</span> ${room.beds}</li>
                                 </ul>
                                 <hr>
-                                <p class="pt-1"><a href="rooms-single" class="btn-custom"><spring:message code="rooms.book_now"/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
+                                <p class="pt-1"><a href="rooms/${room.id}" class="btn-custom"><spring:message code="rooms.book_now"/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
                             </div>
                         </div>
                     </div>

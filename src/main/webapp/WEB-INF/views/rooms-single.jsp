@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +70,34 @@
                             </figure>
                         </div>
                     </div>
-
+                    <div class="col-md-12 ftco-animate mb-5 mt-4">
+                    <form:form action="/book" method="post" modelAttribute="bookDto" cssClass="booking-form">
+                        <div class="row">
+                            <form:hidden path="roomId"/>
+                            <div class="col-md-4 d-flex">
+                                <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                                    <div class="wrap">
+                                        <form:label path="from">Check-in Date</form:label>
+                                        <form:input required="required" type="date" path="from" cssClass="form-control" placeholder="Check-in Date"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex">
+                                <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                                    <div class="wrap">
+                                        <form:label path="to">Check-out Date</form:label>
+                                        <form:input required="required" type="date" path="to" cssClass="form-control" placeholder="Check-out Date"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md d-flex">
+                                <div class="form-group d-flex align-self-stretch">
+                                    <button class="btn btn-primary py-3 px-4 align-self-stretch">Book</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form:form>
+                    </div>
                     <div class="col-md-12 properties-single ftco-animate mb-5 mt-4">
                         <h4 class="mb-4">Review &amp; Ratings</h4>
                         <div class="row">

@@ -7,6 +7,8 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
 @Entity
 @Getter
 @Setter
@@ -22,4 +24,7 @@ public class RoomReservation {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    private LocalDate fromDate;
+
+    private LocalDate toDate;
 }

@@ -7,7 +7,6 @@ import org.example.bookease.entity.UserRole;
 import org.example.bookease.mapper.UserMapper;
 import org.example.bookease.repository.UserRepo;
 import org.example.bookease.service.UserService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
