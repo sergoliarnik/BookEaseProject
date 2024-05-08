@@ -2,7 +2,9 @@ package org.example.bookease.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.bookease.dto.BookDto;
+import org.example.bookease.dto.HotelWithRoomsDto;
 import org.example.bookease.dto.RoomDto;
+import org.example.bookease.service.HotelService;
 import org.example.bookease.service.RoomService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +17,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RoomController {
     private final RoomService roomService;
+    private final HotelService hotelService;
 
     @GetMapping("/rooms")
     public ModelAndView rooms() {
-        List<RoomDto> rooms = roomService.findAll();
+        List<HotelWithRoomsDto> hotelsWithRooms = hotelService.findAllWithRooms();
         return new ModelAndView("rooms")
-                .addObject("rooms", rooms);
+                .addObject("hotelsWithRooms", hotelsWithRooms);
     }
 
     @GetMapping("/rooms/{roomId}")
@@ -34,8 +37,8 @@ public class RoomController {
 
     @GetMapping("/hotels/{hotelId}/rooms")
     public ModelAndView hotelRooms(@PathVariable String hotelId) {
-        List<RoomDto> rooms = roomService.findAllByHotelId(hotelId);
+        List<HotelWithRoomsDto> hotelsWithRooms = List.of(hotelService.findByIdWithRooms(hotelId));
         return new ModelAndView("rooms")
-                .addObject("rooms", rooms);
+                .addObject("hotelsWithRooms", hotelsWithRooms);
     }
 }

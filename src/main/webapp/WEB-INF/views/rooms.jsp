@@ -33,9 +33,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
+                <c:forEach items="${hotelsWithRooms}" var="hotelWithRooms">
+                <c:if test="${hotelWithRooms.rooms.size() != 0}">
+                <h2>${hotelWithRooms.name}</h2>
+                </c:if>
                 <div class="row">
-                    <script>console.log("${rooms}")</script>
-                    <c:forEach items="${rooms}" var="room">
+                    <c:forEach items="${hotelWithRooms.rooms}" var="room">
                     <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                         <div class="room">
                             <a href="rooms/${room.id}" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
@@ -57,6 +60,7 @@
                     </div>
                     </c:forEach>
                 </div>
+                </c:forEach>
             </div>
             <div class="col-lg-3 sidebar">
                 <div class="sidebar-wrap bg-light ftco-animate">
