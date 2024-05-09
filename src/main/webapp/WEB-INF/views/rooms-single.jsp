@@ -261,6 +261,14 @@
 <jsp:include page="includes/footer.jsp"/>
 
 <jsp:include page="includes/scripts.jsp"/>
+<script>
+    const today = new Date().toISOString().split('T')[0];
 
+    const toElement = document.getElementById("to");
+    const fromElement = document.getElementById("from");
+
+    toElement.setAttribute("min", today);
+    fromElement.setAttribute("min", today);
+</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <jsp:include page="includes/styles.jsp"/>
+    <link rel="stylesheet" href="/css/custom/room.css"/>
 </head>
 <body>
 
@@ -40,7 +42,13 @@
                 <div class="row">
                     <c:forEach items="${hotelWithRooms.rooms}" var="room">
                     <div class="col-sm col-md-6 col-lg-4 ftco-animate">
-                        <div class="room">
+                        <c:set var="bookedRoomCss" value=""/>
+                        <c:if test="${room.booked}">
+                            <c:set var="bookedRoomCss" value="booked-room"/>
+                            <spring:message code="rooms.this_room_is_booked" var="bookedRoomTitleI18n"/>
+                            <c:set var="bookedRoomTitle" value="${bookedRoomTitleI18n}"/>
+                        </c:if>
+                        <div class="room ${bookedRoomCss}" title="${bookedRoomTitle}">
                             <a href="rooms/${room.id}" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
                                 <div class="icon d-flex justify-content-center align-items-center">
                                     <span><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -65,72 +73,52 @@
             <div class="col-lg-3 sidebar">
                 <div class="sidebar-wrap bg-light ftco-animate">
                     <h3 class="heading mb-4"><spring:message code="rooms_page.advanced_search"/></h3>
-                    <form action="#">
+                    <form:form action="rooms" modelAttribute="roomFilterDto" method="get">
                         <div class="fields">
                             <div class="form-group">
-                                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="<spring:message code='rooms.check_in_date'/>">
+                                <spring:message code="rooms.check_in_date" var="i18n_check_in_date"/>
+                                <form:input type="text" path="from" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="${i18n_check_in_date}"/>
                             </div>
                             <div class="form-group">
-                                <input type="text" id="checkin_date" class="form-control checkout_date" placeholder="<spring:message code='rooms.check_out_date'/>">
+                                <spring:message code="rooms.check_in_date" var="i18n_check_out_date"/>
+                                <form:input type="text" path="to" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="${i18n_check_out_date}"/>
                             </div>
                             <div class="form-group">
                                 <div class="select-wrap one-third">
                                     <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
-                                    <select name="" id="" class="form-control">
-                                        <option value=""><spring:message code="rooms.room_type"/></option>
-                                        <option value=""><spring:message code="rooms.suite"/></option>
-                                        <option value=""><spring:message code="rooms.family_room"/></option>
-                                        <option value=""><spring:message code="rooms.deluxe_room"/></option>
-                                        <option value=""><spring:message code="rooms.classic_room"/></option>
-                                        <option value=""><spring:message code="rooms.superior_room"/></option>
-                                        <option value=""><spring:message code="rooms.luxury_room"/></option>
-                                    </select>
+                                    <form:select path="roomType" class="form-control">
+                                        <form:option value=""><spring:message code="rooms.room_type"/></form:option>
+                                        <form:options items="${roomTypes}"/>
+                                    </form:select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="select-wrap one-third">
                                     <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">0 <spring:message code="rooms.adult"/></option>
-                                        <option value="">1 <spring:message code="rooms.adult"/></option>
-                                        <option value="">2 <spring:message code="rooms.adult"/></option>
-                                        <option value="">3 <spring:message code="rooms.adult"/></option>
-                                        <option value="">4 <spring:message code="rooms.adult"/></option>
-                                        <option value="">5 <spring:message code="rooms.adult"/></option>
-                                        <option value="">6 <spring:message code="rooms.adult"/></option>
-                                    </select>
+                                    <form:select path="peopleCount" class="form-control">
+                                        <form:option value="1">1 <spring:message code="rooms.adult"/></form:option>
+                                        <form:option value="2">2 <spring:message code="rooms.adult"/></form:option>
+                                        <form:option value="3">3 <spring:message code="rooms.adult"/></form:option>
+                                        <form:option value="4">4 <spring:message code="rooms.adult"/></form:option>
+                                        <form:option value="5">5 <spring:message code="rooms.adult"/></form:option>
+                                        <form:option value="6">6 <spring:message code="rooms.adult"/></form:option>
+                                    </form:select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="select-wrap one-third">
                                     <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">0 <spring:message code="rooms.children"/></option>
-                                        <option value="">1 <spring:message code="rooms.children"/></option>
-                                        <option value="">2 <spring:message code="rooms.children"/></option>
-                                        <option value="">3 <spring:message code="rooms.children"/></option>
-                                        <option value="">4 <spring:message code="rooms.children"/></option>
-                                        <option value="">5 <spring:message code="rooms.children"/></option>
-                                        <option value="">6 <spring:message code="rooms.children"/></option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="range-slider">
-		              		<span>
-										    <input type="number" value="25000" min="0" max="120000"/>	-
-										    <input type="number" value="50000" min="0" max="120000"/>
-										  </span>
-                                    <input value="1000" min="0" max="120000" step="500" type="range"/>
-                                    <input value="50000" min="0" max="120000" step="500" type="range"/>
-                                    </svg>
+                                    <form:select path="city" class="form-control">
+                                        <form:option value=""><spring:message code="hotels.city"/></form:option>
+                                        <form:options items="${cities}"/>
+                                    </form:select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
                             </div>
                         </div>
-                    </form>
+                    </form:form>
                 </div>
                 <div class="sidebar-wrap bg-light ftco-animate">
                     <h3 class="heading mb-4"><spring:message code="rooms_page.star_rating"/></h3>
@@ -177,6 +165,14 @@
 <jsp:include page="includes/footer.jsp"/>
 
 <jsp:include page="includes/scripts.jsp"/>
+<script>
+    const today = new Date().toISOString().split('T')[0];
 
+    const toElement = document.getElementById("to");
+    const fromElement = document.getElementById("from");
+
+    toElement.setAttribute("min", today);
+    fromElement.setAttribute("min", today);
+</script>
 </body>
 </html>

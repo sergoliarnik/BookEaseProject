@@ -1,8 +1,10 @@
 package org.example.bookease.repository;
 
+import org.example.bookease.dto.RoomFilterDto;
 import org.example.bookease.entity.Hotel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

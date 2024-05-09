@@ -12,8 +12,11 @@ import org.example.bookease.repository.UserRepo;
 import org.example.bookease.service.RoomReservationService;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -27,11 +30,24 @@ public class RoomReservationServiceImpl implements RoomReservationService {
     @SneakyThrows
     @Override
     public void reserve(BookDto bookDto, String email) {
+        if (bookDto.getFrom() == null || bookDto.getTo() == null) {
+            throw new IllegalAccessException("From and To date must not be empty");
+        }
         if (bookDto.getFrom().isAfter(bookDto.getTo())) {
             throw new IllegalAccessException("From date must not be after To date");
         }
         Room room = roomRepo.findById(bookDto.getRoomId())
                 .orElseThrow(() -> new NoSuchElementException("Room with id " + bookDto.getRoomId() + " not found"));
+
+        if (roomReservationRepo.isBooked(room.getId(), bookDto.getFrom(), bookDto.getTo())) {
+            List<RoomReservation> roomReservations =
+                    roomReservationRepo.findAllByRoomIdAndFromDateGreaterThanEqual(room.getId(), LocalDate.now());
+            String bookedDates = roomReservations.stream()
+                    .map(rr -> rr.getFromDate().toString() + " " + rr.getToDate().toString())
+                    .collect(Collectors.joining(", ", "[", "]"));
+            throw new IllegalAccessException("This dates have been booked " + bookedDates);
+        }
+
         User user = userRepo.findByEmail(email)
                 .orElseThrow(() -> new NoSuchElementException("User with email " + email + " not found"));
 

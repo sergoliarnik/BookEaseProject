@@ -11,4 +11,5 @@ public final class RoomDto {
     private int pricePerNight;
     private int maxPeople;
     private int beds;
+    private Boolean booked;
 }

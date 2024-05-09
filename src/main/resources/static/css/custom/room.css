@@ -1,0 +1,8 @@
+.booked-room {
+    filter: brightness(0.94);
+    cursor: not-allowed !important;
+}
+
+.booked-room a {
+    cursor: not-allowed !important;
+}

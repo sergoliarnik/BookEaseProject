@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,36 +49,35 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <form action="#" class="booking-form">
+                <form:form action="rooms" method="get" cssClass="booking-form" modelAttribute="roomFilterDto">
                     <div class="row">
                         <div class="col-md-3 d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#"><spring:message code="rooms.check_in_date"/></label>
-                                    <input type="text" class="form-control checkin_date" placeholder="<spring:message code='rooms.check_in_date'/>">
+                                    <form:label path="from"><spring:message code="rooms.check_in_date"/></form:label>
+                                    <form:input path="from" type="date" class="form-control" placeholder="<spring:message code='rooms.check_in_date'/>" />
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#"><spring:message code="rooms.check_out_date"/></label>
-                                    <input type="text" class="form-control checkout_date" placeholder="<spring:message code='rooms.check_out_date'/>">
+                                    <form:label path="to"><spring:message code="rooms.check_out_date"/></form:label>
+                                    <form:input path="to" type="date" class="form-control" placeholder="<spring:message code='rooms.check_out_date'/>"/>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#"><spring:message code="rooms.room"/></label>
+                                    <form:label path="roomType"><spring:message code="rooms.room"/></form:label>
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <c:forEach var="roomType" items="${roomTypes}">
-                                                    <option value="${roomType}">${roomType}</option>
-                                                </c:forEach>
-                                            </select>
+                                            <form:select path="roomType" class="form-control">
+                                                <form:option value=""><spring:message code="rooms.room_type"/></form:option>
+                                                <form:options items="${roomTypes}"/>
+                                            </form:select>
                                         </div>
                                     </div>
                                 </div>
@@ -86,18 +86,18 @@
                         <div class="col-md d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#"><spring:message code="rooms.customer"/></label>
+                                    <form:label path="peopleCount"><spring:message code="rooms.customer"/></form:label>
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <option value="">1 <spring:message code="rooms.adult"/></option>
-                                                <option value="">2 <spring:message code="rooms.adult"/></option>
-                                                <option value="">3 <spring:message code="rooms.adult"/></option>
-                                                <option value="">4 <spring:message code="rooms.adult"/></option>
-                                                <option value="">5 <spring:message code="rooms.adult"/></option>
-                                                <option value="">6 <spring:message code="rooms.adult"/></option>
-                                            </select>
+                                            <form:select path="peopleCount" class="form-control">
+                                                <form:option value="1">1 <spring:message code="rooms.adult"/></form:option>
+                                                <form:option value="2">2 <spring:message code="rooms.adult"/></form:option>
+                                                <form:option value="3">3 <spring:message code="rooms.adult"/></form:option>
+                                                <form:option value="4">4 <spring:message code="rooms.adult"/></form:option>
+                                                <form:option value="5">5 <spring:message code="rooms.adult"/></form:option>
+                                                <form:option value="6">6 <spring:message code="rooms.adult"/></form:option>
+                                            </form:select>
                                         </div>
                                     </div>
                                 </div>
@@ -106,15 +106,14 @@
                         <div class="col-md d-flex">
                             <div class="form-group p-4 align-self-stretch d-flex align-items-end">
                                 <div class="wrap">
-                                    <label for="#"><spring:message code="rooms.where"/></label>
+                                    <form:label path="city"><spring:message code="rooms.where"/></form:label>
                                     <div class="form-field">
                                         <div class="select-wrap">
                                             <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
-                                            <select name="" id="" class="form-control">
-                                                <c:forEach items="${cities}" var="city">
-                                                <option value="">${city}</option>
-                                                </c:forEach>
-                                            </select>
+                                            <form:select path="city" class="form-control">
+                                                <form:option value=""><spring:message code="hotels.city"/></form:option>
+                                                <form:options items="${cities}"/>
+                                            </form:select>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form:form>
             </div>
         </div>
     </div>
@@ -314,5 +313,14 @@
 <jsp:include page="includes/footer.jsp"/>
 
 <jsp:include page="includes/scripts.jsp"/>
+<script>
+    const today = new Date().toISOString().split('T')[0];
+
+    const toElement = document.getElementById("to");
+    const fromElement = document.getElementById("from");
+
+    toElement.setAttribute("min", today);
+    fromElement.setAttribute("min", today);
+</script>
 </body>
 </html>
