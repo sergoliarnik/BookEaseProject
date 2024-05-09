@@ -1,0 +1,8 @@
+:root {
+    --brown: #8d703b;
+}
+
+.sidebar-form-error {
+    padding: 10px;
+    color: var(--brown);
+}

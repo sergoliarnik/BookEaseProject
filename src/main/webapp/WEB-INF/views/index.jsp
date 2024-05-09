@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <jsp:include page="includes/styles.jsp"/>
+    <link rel="stylesheet" href="/css/custom/index-form.css"/>
 </head>
 <body>
 
@@ -52,7 +53,7 @@
                 <form:form action="rooms" method="get" cssClass="booking-form" modelAttribute="roomFilterDto">
                     <div class="row">
                         <div class="col-md-3 d-flex">
-                            <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                            <div class="form-group p-4 align-self-stretch d-flex align-items-end rounded-lg">
                                 <div class="wrap">
                                     <form:label path="from"><spring:message code="rooms.check_in_date"/></form:label>
                                     <form:input path="from" type="date" class="form-control" placeholder="<spring:message code='rooms.check_in_date'/>" />
@@ -60,7 +61,7 @@
                             </div>
                         </div>
                         <div class="col-md-3 d-flex">
-                            <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                            <div class="form-group p-4 align-self-stretch d-flex align-items-end rounded-lg">
                                 <div class="wrap">
                                     <form:label path="to"><spring:message code="rooms.check_out_date"/></form:label>
                                     <form:input path="to" type="date" class="form-control" placeholder="<spring:message code='rooms.check_out_date'/>"/>
@@ -68,7 +69,7 @@
                             </div>
                         </div>
                         <div class="col-md d-flex">
-                            <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                            <div class="form-group p-4 align-self-stretch d-flex align-items-end rounded-lg">
                                 <div class="wrap">
                                     <form:label path="roomType"><spring:message code="rooms.room"/></form:label>
                                     <div class="form-field">
@@ -84,7 +85,7 @@
                             </div>
                         </div>
                         <div class="col-md d-flex">
-                            <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                            <div class="form-group p-4 align-self-stretch d-flex align-items-end rounded-lg">
                                 <div class="wrap">
                                     <form:label path="peopleCount"><spring:message code="rooms.customer"/></form:label>
                                     <div class="form-field">
@@ -104,7 +105,7 @@
                             </div>
                         </div>
                         <div class="col-md d-flex">
-                            <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                            <div class="form-group p-4 align-self-stretch d-flex align-items-end rounded-lg">
                                 <div class="wrap">
                                     <form:label path="city"><spring:message code="rooms.where"/></form:label>
                                     <div class="form-field">
@@ -120,9 +121,9 @@
                             </div>
                         </div>
                         <div class="col-md d-flex" style="margin-top: 20px">
-                            <div class="form-group d-flex align-self-stretch">
+                            <div class="form-group d-flex align-self-stretch rounded-lg">
                                 <input type="submit" value="<spring:message code='rooms.check_availability'/>"
-                                       class="btn btn-primary py-3 px-4 align-self-stretch">
+                                       class="btn btn-primary py-3 px-4 align-self-stretch rounded-lg">
                             </div>
                         </div>
                     </div>

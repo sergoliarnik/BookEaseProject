@@ -11,6 +11,7 @@
 
     <jsp:include page="includes/styles.jsp"/>
     <link rel="stylesheet" href="/css/custom/room.css"/>
+    <link rel="stylesheet" href="/css/custom/form-errors.css"/>
 </head>
 <body>
 
@@ -78,10 +79,12 @@
                             <div class="form-group">
                                 <spring:message code="rooms.check_in_date" var="i18n_check_in_date"/>
                                 <form:input type="text" path="from" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="${i18n_check_in_date}"/>
+                                <form:errors path="from" cssClass="is-invalid sidebar-form-error" element="div"/>
                             </div>
                             <div class="form-group">
                                 <spring:message code="rooms.check_in_date" var="i18n_check_out_date"/>
                                 <form:input type="text" path="to" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="${i18n_check_out_date}"/>
+                                <form:errors path="to" cssClass="is-invalid sidebar-form-error" element="div"/>
                             </div>
                             <div class="form-group">
                                 <div class="select-wrap one-third">
