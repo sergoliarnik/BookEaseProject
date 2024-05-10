@@ -19,6 +19,7 @@
                     <li class="nav-item"><a href="register" class="nav-link"><spring:message code="register"/></a></li>
                 </sec:authorize>
                 <sec:authorize access="isAuthenticated()">
+                    <li class="nav-item"><a href="reservations" class="nav-link"><spring:message code="rooms.reservations"/></a></li>
                     <li class="nav-item"><a href="logout" class="nav-link"><spring:message code="logout"/></a></li>
                 </sec:authorize>
             </ul>

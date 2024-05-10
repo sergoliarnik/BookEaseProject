@@ -3,9 +3,11 @@ package org.example.bookease.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.example.bookease.dto.BookDto;
+import org.example.bookease.dto.RoomReservationDto;
 import org.example.bookease.entity.Room;
 import org.example.bookease.entity.RoomReservation;
 import org.example.bookease.entity.User;
+import org.example.bookease.mapper.RoomReservationMapper;
 import org.example.bookease.repository.RoomRepo;
 import org.example.bookease.repository.RoomReservationRepo;
 import org.example.bookease.repository.UserRepo;
@@ -27,6 +29,8 @@ public class RoomReservationServiceImpl implements RoomReservationService {
     private final RoomRepo roomRepo;
     private final UserRepo userRepo;
     private final RoomReservationRepo roomReservationRepo;
+
+    private final RoomReservationMapper roomReservationMapper;
 
 
     @SneakyThrows
@@ -62,5 +66,17 @@ public class RoomReservationServiceImpl implements RoomReservationService {
         roomReservation.setToDate(bookDto.getTo());
 
         roomReservationRepo.save(roomReservation);
+    }
+
+    @Override
+    public List<RoomReservationDto> getReservation(String email) {
+        User user = userRepo.findByEmail(email)
+                .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("User", "email", email)));
+
+        List<RoomReservation> roomReservations = user.getRoomReservationList();
+
+        return roomReservations.stream()
+                .map(roomReservationMapper::roomReservationToRoomReservationDto)
+                .toList();
     }
 }
