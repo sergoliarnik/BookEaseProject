@@ -10,6 +10,7 @@ import org.example.bookease.mapper.HotelMapper;
 import org.example.bookease.repository.HotelRepo;
 import org.example.bookease.repository.RoomReservationRepo;
 import org.example.bookease.service.HotelService;
+import org.example.bookease.util.ErrorMessages;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
@@ -33,7 +34,7 @@ public class HotelServiceImpl implements HotelService {
     @Override
     public HotelWithRoomsDto findByIdWithRooms(String id) {
         Hotel hotel = hotelRepo.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Hotel with id " + id + " not found"));
+                .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("Hotel", "id", id)));
         return hotelMapper.hotelToHotelWithRoomsDto(hotel);
     }
 
@@ -47,7 +48,7 @@ public class HotelServiceImpl implements HotelService {
     @SneakyThrows
     public List<HotelWithRoomsDto> findAllWithRooms(RoomFilterDto filter) {
         if (filter.getFrom() != null && filter.getTo() != null && filter.getFrom().isAfter(filter.getTo())) {
-            throw new IllegalAccessException("From date must not be after To date");
+            throw new IllegalAccessException(ErrorMessages.getFromDateMustBeBeforeToDate());
         }
 
         List<Hotel> hotels = hotelRepo.findAll();

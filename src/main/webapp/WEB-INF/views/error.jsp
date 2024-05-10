@@ -2,14 +2,10 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title><spring:message code="bookease"/> - <spring:message code="error"/></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <jsp:include page="includes/styles.jsp"/>
-    <link rel="stylesheet" href="/css/custom/error-page.css"/>
-</head>
+<spring:message code="error" var="error_i18n"/>
+<jsp:include page="includes/head.jsp">
+    <jsp:param name="title" value="${error_i18n}"/>
+</jsp:include>
 <body>
 
 <jsp:include page="includes/header.jsp"/>

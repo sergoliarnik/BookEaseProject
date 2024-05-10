@@ -2,13 +2,10 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title><spring:message code="bookease"/> - <spring:message code="blogs.blog"/></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <jsp:include page="includes/styles.jsp"/>
-</head>
+<spring:message code="blogs.blog" var="blog_i18n"/>
+<jsp:include page="includes/head.jsp">
+    <jsp:param name="title" value="${blog_i18n}"/>
+</jsp:include>
 <body>
 
 <jsp:include page="includes/header.jsp"/>

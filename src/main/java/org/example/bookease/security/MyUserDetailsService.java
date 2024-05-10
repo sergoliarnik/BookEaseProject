@@ -3,6 +3,7 @@ package org.example.bookease.security;
 import lombok.RequiredArgsConstructor;
 import org.example.bookease.entity.User;
 import org.example.bookease.repository.UserRepo;
+import org.example.bookease.util.ErrorMessages;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -19,7 +20,8 @@ public class MyUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<User> userOp = userRepo.findByEmail(username);
         User user = userOp
-                .orElseThrow(() -> new UsernameNotFoundException("User with email " + username + " not found"));
+                .orElseThrow(() -> new UsernameNotFoundException(
+                        ErrorMessages.getNotFound("User", "username", username)));
         return new MyUserDetails(user);
     }
 }

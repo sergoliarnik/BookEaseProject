@@ -4,13 +4,10 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title><spring:message code="bookease"/> - <spring:message code="login"/></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <jsp:include page="includes/styles.jsp"/>
-</head>
+<spring:message code="login" var="login_i18n"/>
+<jsp:include page="includes/head.jsp">
+    <jsp:param name="title" value="${login_i18n}"/>
+</jsp:include>
 <body>
 
 <jsp:include page="includes/header.jsp"/>

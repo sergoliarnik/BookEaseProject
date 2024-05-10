@@ -4,15 +4,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title><spring:message code="bookease"/> - <spring:message code="rooms"/></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <jsp:include page="includes/styles.jsp"/>
-    <link rel="stylesheet" href="/css/custom/room.css"/>
-    <link rel="stylesheet" href="/css/custom/form-errors.css"/>
-</head>
+<spring:message code="rooms" var="rooms_i18n"/>
+<jsp:include page="includes/head.jsp">
+    <jsp:param name="title" value="${rooms_i18n}"/>
+</jsp:include>
 <body>
 
 <jsp:include page="includes/header.jsp"/>

@@ -6,8 +6,8 @@ import org.example.bookease.entity.Room;
 import org.example.bookease.mapper.RoomMapper;
 import org.example.bookease.repository.HotelRepo;
 import org.example.bookease.repository.RoomRepo;
-import org.example.bookease.service.HotelService;
 import org.example.bookease.service.RoomService;
+import org.example.bookease.util.ErrorMessages;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,7 +29,7 @@ public class RoomServiceImpl implements RoomService {
     @Override
     public List<RoomDto> findAllByHotelId(String hotelId) {
         if (!hotelRepo.existsById(hotelId)) {
-            throw new NoSuchElementException("Hotel with id " + hotelId + "not found");
+            throw new NoSuchElementException(ErrorMessages.getNotFound("Hotel", "id", hotelId));
         }
 
         List<Room> rooms = roomRepo.findAllByHotelId(hotelId);

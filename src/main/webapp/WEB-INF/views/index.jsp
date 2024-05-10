@@ -4,14 +4,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title><spring:message code="bookease"/></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <jsp:include page="includes/styles.jsp"/>
-    <link rel="stylesheet" href="/css/custom/index-form.css"/>
-</head>
+<spring:message code="navigation.home" var="home_i18n"/>
+<jsp:include page="includes/head.jsp">
+    <jsp:param name="title" value="${home_i18n}"/>
+</jsp:include>
 <body>
 
 <jsp:include page="includes/header.jsp"/>

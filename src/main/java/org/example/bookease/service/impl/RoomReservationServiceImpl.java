@@ -10,6 +10,8 @@ import org.example.bookease.repository.RoomRepo;
 import org.example.bookease.repository.RoomReservationRepo;
 import org.example.bookease.repository.UserRepo;
 import org.example.bookease.service.RoomReservationService;
+import org.example.bookease.util.ErrorMessages;
+import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -31,25 +33,26 @@ public class RoomReservationServiceImpl implements RoomReservationService {
     @Override
     public void reserve(BookDto bookDto, String email) {
         if (bookDto.getFrom() == null || bookDto.getTo() == null) {
-            throw new IllegalAccessException("From and To date must not be empty");
+            throw new IllegalAccessException(ErrorMessages.getMustNotBeEmpty("From", "To"));
         }
         if (bookDto.getFrom().isAfter(bookDto.getTo())) {
-            throw new IllegalAccessException("From date must not be after To date");
+            throw new IllegalAccessException(ErrorMessages.getFromDateMustBeBeforeToDate());
         }
         Room room = roomRepo.findById(bookDto.getRoomId())
-                .orElseThrow(() -> new NoSuchElementException("Room with id " + bookDto.getRoomId() + " not found"));
+                .orElseThrow(() -> new NoSuchElementException(
+                        ErrorMessages.getNotFound("Room", "id", bookDto.getRoomId())));
 
         if (roomReservationRepo.isBooked(room.getId(), bookDto.getFrom(), bookDto.getTo())) {
             List<RoomReservation> roomReservations =
                     roomReservationRepo.findAllByRoomIdAndFromDateGreaterThanEqual(room.getId(), LocalDate.now());
-            String bookedDates = roomReservations.stream()
-                    .map(rr -> rr.getFromDate().toString() + " " + rr.getToDate().toString())
-                    .collect(Collectors.joining(", ", "[", "]"));
-            throw new IllegalAccessException("This dates have been booked " + bookedDates);
+            List<Pair<LocalDate, LocalDate>> bookedDates = roomReservations.stream()
+                    .map(rr -> Pair.of(rr.getFromDate(), rr.getToDate()))
+                    .toList();
+            throw new IllegalAccessException(ErrorMessages.getDatesHaveBeenBooked(bookedDates));
         }
 
         User user = userRepo.findByEmail(email)
-                .orElseThrow(() -> new NoSuchElementException("User with email " + email + " not found"));
+                .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("User", "email", email)));
 
         RoomReservation roomReservation = new RoomReservation();
         roomReservation.setId(UUID.randomUUID().toString());
