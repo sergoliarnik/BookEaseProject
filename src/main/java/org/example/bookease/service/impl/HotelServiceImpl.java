@@ -39,6 +39,18 @@ public class HotelServiceImpl implements HotelService {
     }
 
     @Override
+    @SneakyThrows
+    public HotelWithRoomsDto findByIdWithRooms(String id, RoomFilterDto filter) {
+        if (filter.getFrom() != null && filter.getTo() != null && filter.getFrom().isAfter(filter.getTo())) {
+            throw new IllegalAccessException(ErrorMessages.getFromDateMustBeBeforeToDate());
+        }
+
+        Hotel hotel = hotelRepo.findById(id)
+                .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("Hotel", "id", id)));
+        return hotelMapper.hotelToHotelWithRoomsDto(hotel);
+    }
+
+    @Override
     public List<HotelWithRoomsDto> findAllWithRooms() {
         List<Hotel> hotels = hotelRepo.findAll();
         return hotels.stream().map(hotelMapper::hotelToHotelWithRoomsDto).toList();

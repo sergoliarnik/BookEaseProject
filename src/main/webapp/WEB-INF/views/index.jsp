@@ -172,14 +172,14 @@
             <c:forEach var="hotel" items="${hotels}">
             <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                 <div class="room">
-                    <a href="/hotels/${hotel.id}/rooms" class="img d-flex justify-content-center align-items-center"
+                    <a href="/hotels/${hotel.id}" class="img d-flex justify-content-center align-items-center"
                        style='background-image: url(${hotel.imageUrl});'>
                         <div class="icon d-flex justify-content-center align-items-center">
                             <span><i class="fa-solid fa-magnifying-glass"></i></span>
                         </div>
                     </a>
                     <div class="text p-3 text-center">
-                        <h3 class="mb-3"><a href="/hotels/${hotel.id}/rooms">${hotel.name}</a></h3>
+                        <h3 class="mb-3"><a href="/hotels/${hotel.id}">${hotel.name}</a></h3>
                         <hr>
                         <p class="pt-1"><a href="/hotels/${hotel.id}/rooms" class="btn-custom"><spring:message code='rooms'/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
                     </div>

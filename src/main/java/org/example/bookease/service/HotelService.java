@@ -12,6 +12,8 @@ public interface HotelService {
 
     HotelWithRoomsDto findByIdWithRooms(String id);
 
+    HotelWithRoomsDto findByIdWithRooms(String id, RoomFilterDto filter);
+
     List<HotelWithRoomsDto> findAllWithRooms();
 
     List<HotelWithRoomsDto> findAllWithRooms(RoomFilterDto filter);
