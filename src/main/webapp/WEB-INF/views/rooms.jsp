@@ -18,7 +18,7 @@
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
                 <div class="text">
-                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html"><spring:message code="navigation.home"/></a></span> <span><spring:message code="rooms"/></span></p>
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/"><spring:message code="navigation.home"/></a></span> <span><spring:message code="rooms"/></span></p>
                     <h1 class="mb-4 bread"><spring:message code="rooms"/></h1>
                 </div>
             </div>
@@ -45,20 +45,20 @@
                             <c:set var="bookedRoomTitle" value="${bookedRoomTitleI18n}"/>
                         </c:if>
                         <div class="room ${bookedRoomCss}" title="${bookedRoomTitle}">
-                            <a href="rooms/${room.id}" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
+                            <a href="/rooms/${room.id}" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
                                 <div class="icon d-flex justify-content-center align-items-center">
                                     <span><i class="fa-solid fa-magnifying-glass"></i></span>
                                 </div>
                             </a>
                             <div class="text p-3 text-center">
-                                <h3 class="mb-3"><a href="rooms/${room.id}">${room.type}</a></h3>
+                                <h3 class="mb-3"><a href="/rooms/${room.id}">${room.type}</a></h3>
                                 <p><span class="price mr-2">$${room.pricePerNight}</span> <span class="per"><spring:message code="rooms_page.per_night"/></span></p>
                                 <ul class="list">
                                     <li><span><spring:message code="rooms.max"/>:</span> ${room.maxPeople} <spring:message code="rooms.persons"/></li>
                                     <li><span><spring:message code="rooms.bed"/>:</span> ${room.beds}</li>
                                 </ul>
                                 <hr>
-                                <p class="pt-1"><a href="rooms/${room.id}" class="btn-custom"><spring:message code="rooms.book_now"/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
+                                <p class="pt-1"><a href="/rooms/${room.id}" class="btn-custom"><spring:message code="rooms.book_now"/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
                             </div>
                         </div>
                     </div>

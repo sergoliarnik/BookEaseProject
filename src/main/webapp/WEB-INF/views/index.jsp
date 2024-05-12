@@ -243,7 +243,7 @@
         <div class="row d-flex">
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single" class="block-20" style="background-image: url('/images/image_1.jpg');">
+                    <a href="/blog-single" class="block-20" style="background-image: url('/images/image_1.jpg');">
                     </a>
                     <div class="text mt-3 d-block">
                         <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
@@ -258,7 +258,7 @@
             </div>
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single" class="block-20" style="background-image: url('/images/image_2.jpg');">
+                    <a href="/blog-single" class="block-20" style="background-image: url('/images/image_2.jpg');">
                     </a>
                     <div class="text mt-3">
                         <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
@@ -273,7 +273,7 @@
             </div>
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single" class="block-20" style="background-image: url('/images/image_3.jpg');">
+                    <a href="/blog-single" class="block-20" style="background-image: url('/images/image_3.jpg');">
                     </a>
                     <div class="text mt-3">
                         <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
@@ -288,7 +288,7 @@
             </div>
             <div class="col-md-3 d-flex ftco-animate">
                 <div class="blog-entry align-self-stretch">
-                    <a href="blog-single" class="block-20" style="background-image: url('/images/image_4.jpg');">
+                    <a href="/blog-single" class="block-20" style="background-image: url('/images/image_4.jpg');">
                     </a>
                     <div class="text mt-3">
                         <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
