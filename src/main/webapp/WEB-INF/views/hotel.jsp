@@ -65,7 +65,7 @@
                         <div class="block-16">
                             <figure>
                                 <img src="/images/room-4.jpg" alt="Image placeholder" class="img-fluid">
-                                <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span class="icon-play"></span></a>
+                                <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span><i class="fa-solid fa-play"></i></span></a>
                             </figure>
                         </div>
                     </div>
@@ -78,31 +78,31 @@
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">
-                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i> 100 <spring:message code="rooms.rating"/></span></p>
+                                            <p class="rate"><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 100 <spring:message code="rooms.rating"/></span></p>
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">
-                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i> 30 <spring:message code="rooms.rating"/></span></p>
+                                            <p class="rate"><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> 30 <spring:message code="rooms.rating"/></span></p>
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">
-                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 5 <spring:message code="rooms.rating"/></span></p>
+                                            <p class="rate"><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> 5 <spring:message code="rooms.rating"/></span></p>
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">
-                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 <spring:message code="rooms.rating"/></span></p>
+                                            <p class="rate"><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> 0 <spring:message code="rooms.rating"/></span></p>
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">
-                                            <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i> 0 <spring:message code="rooms.rating"/></span></p>
+                                            <p class="rate"><span><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> 0 <spring:message code="rooms.rating"/></span></p>
                                         </label>
                                     </div>
                                 </form>
@@ -117,14 +117,14 @@
                                 <div class="room">
                                     <a href="/rooms/${room.id}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
                                         <div class="icon d-flex justify-content-center align-items-center">
-                                            <span class="icon-search2"></span>
+                                            <span><i class="fa-solid fa-magnifying-glass"></i></span>
                                         </div>
                                     </a>
                                     <div class="text p-3 text-center">
                                         <h3 class="mb-3"><a href="/rooms/${room.id}">${room.type}</a></h3>
                                         <p><span class="price mr-2">$${room.pricePerNight}</span> <span class="per"><spring:message code="rooms_page.per_night"/></span></p>
                                         <hr>
-                                        <p class="pt-1"><a href="/rooms/${room.id}" class="btn-custom"><spring:message code="rooms.view_room_details"/> <span class="icon-long-arrow-right"></span></a></p>
+                                        <p class="pt-1"><a href="/rooms/${room.id}" class="btn-custom"><spring:message code="rooms.view_room_details"/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -157,28 +157,6 @@
                     <h3><spring:message code="blogs.recent_blog"/></h3>
                     <div class="block-21 mb-4 d-flex">
                         <a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                            <div class="meta">
-                                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(/images/image_2.jpg);"></a>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                            <div class="meta">
-                                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(/images/image_3.jpg);"></a>
                         <div class="text">
                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                             <div class="meta">
