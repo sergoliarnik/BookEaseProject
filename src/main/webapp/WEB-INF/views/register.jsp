@@ -30,21 +30,22 @@
         <form:form action="/user" method="post" modelAttribute="registerUserDto">
             <div class="fields">
                 <div class="form-group">
-                    <form:label path="name">Name:</form:label>
+                    <form:label path="name"><spring:message code="users.name"/>:</form:label>
                     <form:input type="text" path="name" cssClass="form-control"/><br>
                 </div>
-                    <form:label path="surname">Surname:</form:label>
+                    <form:label path="surname"><spring:message code="users.surname"/>:</form:label>
                     <form:input type="text" path="surname" cssClass="form-control"/><br>
                 <div class="form-group">
-                    <form:label path="email">Email:</form:label>
+                    <form:label path="email"><spring:message code="users.email"/>:</form:label>
                     <form:input type="email" path="email" cssClass="form-control"/><br>
                 </div>
                 <div class="form-group">
-                    <form:label path="password">Password:</form:label>
+                    <form:label path="password"><spring:message code="users.password"/>:</form:label>
                     <form:input type="password" path="password" cssClass="form-control"/><br>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Submit" class="btn btn-primary py-3 px-5"/>
+                    <spring:message code="button.submit" var="submit_i18n"/>
+                    <input type="submit" value="${submit_i18n}" class="btn btn-primary py-3 px-5"/>
                 </div>
             </div>
         </form:form>

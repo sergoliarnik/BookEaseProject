@@ -47,7 +47,7 @@
                     <ul class="list-unstyled">
                         <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.privacy.career"/></a></li>
                         <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.privacy.about_us"/></a></li>
-                        <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.privacy.contact_us"/></a></li>
+                        <li><a href="#" class="py-2 d-block"><spring:message code="contact.contact_us"/></a></li>
                         <li><a href="#" class="py-2 d-block"><spring:message code="page.footer.privacy.services"/></a></li>
                     </ul>
                 </div>

@@ -13,7 +13,7 @@
                 <li class="nav-item"><a href="rooms" class="nav-link"><spring:message code="rooms"/></a></li>
                 <li class="nav-item"><a href="restaurant" class="nav-link"><spring:message code="restaurant.restaurant"/></a></li>
                 <li class="nav-item"><a href="blog" class="nav-link"><spring:message code="blogs.blog"/></a></li>
-                <li class="nav-item"><a href="contact" class="nav-link"><spring:message code="navigation.contact"/></a></li>
+                <li class="nav-item"><a href="contact" class="nav-link"><spring:message code="contact"/></a></li>
                 <sec:authorize access="!isAuthenticated()">
                     <li class="nav-item"><a href="login" class="nav-link"><spring:message code="login"/></a></li>
                     <li class="nav-item"><a href="register" class="nav-link"><spring:message code="register"/></a></li>

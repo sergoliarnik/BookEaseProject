@@ -2,7 +2,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="en">
-<spring:message code="navigation.contact" var="contact_i18n"/>
+<spring:message code="contact" var="contact_i18n"/>
 <jsp:include page="includes/head.jsp">
     <jsp:param name="title" value="${contact_i18n}"/>
 </jsp:include>
@@ -16,8 +16,8 @@
         <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
             <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
                 <div class="text">
-                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
-                    <h1 class="mb-4 bread">Contact Us</h1>
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html"><spring:message code="navigation.home"/></a></span> <span><spring:message code="contact"/></span></p>
+                    <h1 class="mb-4 bread"><spring:message code="contact.contact_us"/></h1>
                 </div>
             </div>
         </div>
@@ -29,27 +29,27 @@
     <div class="container">
         <div class="row d-flex mb-5 contact-info">
             <div class="col-md-12 mb-4">
-                <h2 class="h3">Contact Information</h2>
+                <h2 class="h3"><spring:message code="contact.contact_information"/></h2>
             </div>
             <div class="w-100"></div>
             <div class="col-md-3 d-flex">
                 <div class="info bg-white p-4">
-                    <p><span>Address:</span> Uzhhorod hotel, Bohdana Khmel'nyts'koho Square, 2, Uzhhorod, Zakarpattia Oblast, 88000</p>
+                    <p><span><spring:message code="contact.address"/>:</span> Uzhhorod hotel, Bohdana Khmel'nyts'koho Square, 2, Uzhhorod, Zakarpattia Oblast, 88000</p>
                 </div>
             </div>
             <div class="col-md-3 d-flex">
                 <div class="info bg-white p-4">
-                    <p><span>Phone:</span> <a href="tel://1234567920">+380 99 000 0000</a></p>
+                    <p><span><spring:message code="contact.phone"/>:</span> <a href="tel://1234567920">+380 99 000 0000</a></p>
                 </div>
             </div>
             <div class="col-md-3 d-flex">
                 <div class="info bg-white p-4">
-                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@bookease.com</a></p>
+                    <p><span><spring:message code="contact.email"/>:</span> <a href="mailto:info@yoursite.com">info@bookease.com</a></p>
                 </div>
             </div>
             <div class="col-md-3 d-flex">
                 <div class="info bg-white p-4">
-                    <p><span>Website</span> <a href="#">bookease.com</a></p>
+                    <p><span><spring:message code="contact.website"/></span> <a href="#">bookease.com</a></p>
                 </div>
             </div>
         </div>
@@ -57,19 +57,20 @@
             <div class="col-md-6 order-md-last d-flex">
                 <form action="#" class="bg-white p-5 contact-form">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name">
+
+                        <input type="text" class="form-control" placeholder="<spring:message code="users.name"/>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email">
+                        <input type="text" class="form-control" placeholder="<spring:message code="users.email"/>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject">
+                        <input type="text" class="form-control" placeholder="<spring:message code="contact.subject"/>">
                     </div>
                     <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                        <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="<spring:message code="contact.message"/>"></textarea>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        <input type="submit" value="<spring:message code="button.send_message"/>" class="btn btn-primary py-3 px-5">
                     </div>
                 </form>
 

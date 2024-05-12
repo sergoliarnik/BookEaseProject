@@ -46,21 +46,22 @@
         <form:form action="/login" method="post" modelAttribute="loginUserDto">
             <div class="fields">
                 <div class="form-group">
-                    <form:label path="email">Email:</form:label>
+                    <form:label path="email"><spring:message code="users.email"/>:</form:label>
                     <form:input type="email" path="email" cssClass="form-control"/><br>
                 </div>
                 <div class="form-group">
-                    <form:label path="password">Password:</form:label>
+                    <form:label path="password"><spring:message code="users.password"/>:</form:label>
                     <form:input type="password" path="password" cssClass="form-control"/><br>
                 </div>
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="remember-me" name="remember-me"/>
-                        <label class="form-check-label" for="remember-me">Remember Me?</label>
+                        <label class="form-check-label" for="remember-me"><spring:message code="login.remember_me"/>?</label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Submit" class="btn btn-primary py-3 px-5"/>
+                    <spring:message code="button.submit" var="submit_i18n"/>
+                    <input type="submit" value="${submit_i18n}" class="btn btn-primary py-3 px-5"/>
                 </div>
             </div>
         </form:form>
