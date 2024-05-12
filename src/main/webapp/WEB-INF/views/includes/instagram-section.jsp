@@ -8,40 +8,40 @@
         </div>
         <div class="row no-gutters">
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="/images/insta-1.jpg" class="insta-img image-popup"
-                   style="background-image: url(/images/insta-1.jpg);">
+                <a href="/images/instagram/insta-1.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/instagram/insta-1.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="align-self-center"><i class="fa-brands fa-instagram"></i></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="/images/insta-2.jpg" class="insta-img image-popup"
-                   style="background-image: url(/images/insta-2.jpg);">
+                <a href="/images/instagram/insta-2.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/instagram/insta-2.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="align-self-center"><i class="fa-brands fa-instagram"></i></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="/images/insta-3.jpg" class="insta-img image-popup"
-                   style="background-image: url(/images/insta-3.jpg);">
+                <a href="/images/instagram/insta-3.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/instagram/insta-3.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="align-self-center"><i class="fa-brands fa-instagram"></i></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="/images/insta-4.jpg" class="insta-img image-popup"
-                   style="background-image: url(/images/insta-4.jpg);">
+                <a href="/images/instagram/insta-4.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/instagram/insta-4.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="align-self-center"><i class="fa-brands fa-instagram"></i></span>
                     </div>
                 </a>
             </div>
             <div class="col-sm-12 col-md ftco-animate">
-                <a href="/images/insta-5.jpg" class="insta-img image-popup"
-                   style="background-image: url(/images/insta-5.jpg);">
+                <a href="/images/instagram/insta-5.jpg" class="insta-img image-popup"
+                   style="background-image: url(/images/instagram/insta-5.jpg);">
                     <div class="icon d-flex justify-content-center">
                         <span class="align-self-center"><i class="fa-brands fa-instagram"></i></span>
                     </div>
