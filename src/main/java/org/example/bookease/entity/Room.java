@@ -19,8 +19,6 @@ public class Room {
     @Id
     private String id;
 
-    private String imageUrl;
-
     @Enumerated(EnumType.STRING)
     private RoomType type;
 
@@ -30,11 +28,20 @@ public class Room {
 
     private int beds;
 
+    private int size;
+
+    private String description;
+
+    private String view;
+
     @ManyToOne
     @JoinColumn(name = "hotel_id")
     private Hotel hotel;
 
     @OneToMany(mappedBy = "room")
     private List<RoomReservation> roomReservationList;
+
+    @OneToMany(mappedBy = "room")
+    private List<RoomImage> images;
 }
 

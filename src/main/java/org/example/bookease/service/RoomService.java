@@ -8,4 +8,6 @@ public interface RoomService {
     List<RoomDto> findAll();
 
     List<RoomDto> findAllByHotelId(String hotelId);
+
+    RoomDto findById(String roomId);
 }

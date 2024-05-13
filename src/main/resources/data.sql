@@ -1,3 +1,4 @@
+DELETE FROM room_image;
 DELETE FROM room_reservation;
 DELETE FROM room;
 DELETE FROM hotel;
@@ -16,11 +17,20 @@ INSERT INTO hotel (id, name, image_url, city, description, short_description, co
            ('0fb4ea23-eb3e-411b-b548-db62d052c99a', 'Forsage', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/462140029.jpg?k=93c4a657f9e0210a12931c1b16a46ed37ac4ae3af8761da7925794cfc45c5539&o=&hp=1','Uzhhorod', 'Discover unparalleled hospitality at Forsage Hotel. Located amidst breathtaking landscapes, our boutique hotel offers opulent accommodations, gourmet dining, and bespoke experiences, ensuring a truly memorable retreat', 'Discover unparalleled hospitality at Forsage Hotel. Located amidst breathtaking landscapes, our boutique hotel offers opulent accommodations, gourmet dining, and bespoke experiences, ensuring a truly memorable retreat', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc');
 
 -- ROOMS
-INSERT INTO room (id, beds, image_url, max_people, price_per_night, type, hotel_id)
-    VALUES ('8788b001-269e-4dbd-92c8-b647b478def0', 1, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/390775438.jpg?k=ffd6a1b8279cc4cfed33bac30c6157f120ebb524abd9ac67adc1e515e464cf6e&o=', 4, 25, 'suite', '8788b001-269e-4dbd-92c8-b647b478def0'),
-           ('0bec3c56-9393-47b2-8061-1030ef4dc2ef', 2, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271233956.jpg?k=471bb91eb5c46f59b6cc2d8aa9e0b6de879301772f57c1657a4e5dc396dd49b3&o=', 4, 25, 'suite', '8788b001-269e-4dbd-92c8-b647b478def0'),
-           ('0fb4ea23-eb3e-411b-b548-db62d052c99a', 3, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271328644.jpg?k=e4483377a08304813b554703b9c7b2a3e43f6f50177cb365feb2393880890455&o=', 4, 25, 'suite', '8788b001-269e-4dbd-92c8-b647b478def0'),
-           ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 4, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271233026.jpg?k=067a77044debc629fa5ac10f699d4b8d543d4d5c4795a8b0e90b4aa5910f5123&o=', 4, 25, 'suite', '0bec3c56-9393-47b2-8061-1030ef4dc2ef');
+INSERT INTO room (id, type, price_per_night, max_people, beds, size, description, view, hotel_id)
+    VALUES ('8788b001-269e-4dbd-92c8-b647b478def0', 'suite', 25, 4, 1, 40, 'Some room description....', 'City', '8788b001-269e-4dbd-92c8-b647b478def0'),
+           ('0bec3c56-9393-47b2-8061-1030ef4dc2ef', 'suite', 30, 4, 2, 55, 'Some room description....', 'Sea', '8788b001-269e-4dbd-92c8-b647b478def0'),
+           ('0fb4ea23-eb3e-411b-b548-db62d052c99a', 'suite', 40, 4, 3, 57, 'Some room description....', 'Ocean', '8788b001-269e-4dbd-92c8-b647b478def0'),
+           ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'suite', 45, 4, 4, 80, 'Some room description....', 'Mountains', '0bec3c56-9393-47b2-8061-1030ef4dc2ef');
+
+-- ROOMS IMAGE
+INSERT INTO room_image (id, room_id, image_url)
+    VALUES ('8788b001-269e-4dbd-92c8-b647b478def0', '8788b001-269e-4dbd-92c8-b647b478def0', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/390775438.jpg?k=ffd6a1b8279cc4cfed33bac30c6157f120ebb524abd9ac67adc1e515e464cf6e&o='),
+           ('0bec3c56-9393-47b2-8061-1030ef4dc2ef', '0bec3c56-9393-47b2-8061-1030ef4dc2ef', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271233956.jpg?k=471bb91eb5c46f59b6cc2d8aa9e0b6de879301772f57c1657a4e5dc396dd49b3&o='),
+           ('0fb4ea23-eb3e-411b-b548-db62d052c99a', '0fb4ea23-eb3e-411b-b548-db62d052c99a', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271328644.jpg?k=e4483377a08304813b554703b9c7b2a3e43f6f50177cb365feb2393880890455&o='),
+           ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271233026.jpg?k=067a77044debc629fa5ac10f699d4b8d543d4d5c4795a8b0e90b4aa5910f5123&o='),
+           ('a8f14c61-f90e-44d7-8994-a305e51ff2fb', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/390775438.jpg?k=ffd6a1b8279cc4cfed33bac30c6157f120ebb524abd9ac67adc1e515e464cf6e&o='),
+           ('a8f14c61-f90e-44d7-8994-a305e51ff2fa', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271233956.jpg?k=471bb91eb5c46f59b6cc2d8aa9e0b6de879301772f57c1657a4e5dc396dd49b3&o=');
 
 -- RESTAURANTS
 INSERT INTO restaurant (id, name, company_id)

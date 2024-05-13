@@ -104,7 +104,7 @@
                             <c:forEach var="room" items="${hotelWithRoomsDto.rooms}" >
                             <div class="col-sm col-md-6 ftco-animate">
                                 <div class="room">
-                                    <a href="/rooms/${room.id}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
+                                    <a href="/rooms/${room.id}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/65045f093c166fdddb4a94a5_x-65045f0266217.webp);">
                                         <div class="icon d-flex justify-content-center align-items-center">
                                             <span><i class="fa-solid fa-magnifying-glass"></i></span>
                                         </div>

@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <spring:message code="rooms.room" var="room_i18n"/>
@@ -32,32 +33,36 @@
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-md-12 ftco-animate">
-                        <h2 class="mb-4">Family Room</h2>
+                        <h2 class="mb-4">${room.type} <spring:message code="rooms.room"/></h2>
                         <div class="single-slider owl-carousel">
-                            <div class="item">
-                                <div class="room-img" style="background-image: url(/images/room-1.jpg);"></div>
-                            </div>
-                            <div class="item">
-                                <div class="room-img" style="background-image: url(/images/room-2.jpg);"></div>
-                            </div>
-                            <div class="item">
-                                <div class="room-img" style="background-image: url(/images/room-3.jpg);"></div>
-                            </div>
+                            <c:choose>
+                                <c:when test="${empty room.images}">
+                                    <div class="item">
+                                        <div class="room-img" style="background-image: url(https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png);"></div>
+                                    </div>
+                                </c:when>
+                                <c:otherwise>
+                                    <c:forEach var="image" items="${room.images}">
+                                        <div class="item">
+                                            <div class="room-img" style="background-image: url(${image.imageUrl});"></div>
+                                        </div>
+                                    </c:forEach>
+                                </c:otherwise>
+                            </c:choose>
                         </div>
                     </div>
                     <div class="col-md-12 room-single mt-4 mb-5 ftco-animate">
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                        <p>${room.description}</p>
                         <div class="d-md-flex mt-5 mb-5">
                             <ul class="list">
-                                <li><span><spring:message code="rooms.max"/>:</span> 3 <spring:message code="rooms.persons"/></li>
-                                <li><span><spring:message code="rooms.size"/>:</span> 45 m2</li>
+                                <li><span><spring:message code="rooms.max"/>:</span> ${room.maxPeople} <spring:message code="rooms.persons"/></li>
+                                <li><span><spring:message code="rooms.size"/>:</span> ${room.size} m2</li>
                             </ul>
                             <ul class="list ml-md-5">
-                                <li><span><spring:message code="rooms.view"/>:</span> Sea View</li>
-                                <li><span><spring:message code="rooms.bed"/>:</span> 1</li>
+                                <li><span><spring:message code="rooms.view"/>:</span> ${room.view}</li>
+                                <li><span><spring:message code="rooms.beds"/>:</span> ${room.beds}</li>
                             </ul>
                         </div>
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
                     </div>
                     <div class="col-md-12 ftco-animate mb-5 mt-4">
                     <form:form action="/book" method="post" modelAttribute="bookDto" cssClass="booking-form">
@@ -150,10 +155,6 @@
                 </div>
             </div> <!-- .col-md-8 -->
             <div class="col-lg-4 sidebar ftco-animate">
-                <div class="sidebar-box ftco-animate">
-                    <h3>Paragraph</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-                </div>
                 <div class="sidebar-box ftco-animate">
                     <h3>Tag Cloud</h3>
                     <div class="tagcloud">

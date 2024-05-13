@@ -35,4 +35,11 @@ public class RoomServiceImpl implements RoomService {
         List<Room> rooms = roomRepo.findAllByHotelId(hotelId);
         return rooms.stream().map(roomMapper::roomToRoomDto).toList();
     }
+
+    @Override
+    public RoomDto findById(String roomId) {
+        Room room = roomRepo.findById(roomId)
+                .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("Room", "id", roomId)));
+        return roomMapper.roomToRoomDto(room);
+    }
 }

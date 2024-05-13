@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <c:forEach items="${hotelsWithRooms}" var="hotelWithRooms">
-                <c:if test="${hotelWithRooms.rooms.size() != 0}">
+                <c:if test="${not empty hotelWithRooms.rooms}">
                 <h2>${hotelWithRooms.name}</h2>
                 </c:if>
                 <div class="row">
@@ -45,7 +45,11 @@
                             <c:set var="bookedRoomTitle" value="${bookedRoomTitleI18n}"/>
                         </c:if>
                         <div class="room ${bookedRoomCss}" title="${bookedRoomTitle}">
-                            <a href="/rooms/${room.id}" class="img d-flex justify-content-center align-items-center" style="background-image: url(${room.imageUrl});">
+                            <c:set var="roomImage" value="https://clarionhealthcare.com/wp-content/uploads/2020/12/default-fallback-image.png"/>
+                            <c:if test="${not empty room.images}">
+                                <c:set var="roomImage" value="${room.images[0].imageUrl}"/>
+                            </c:if>
+                            <a href="/rooms/${room.id}" class="img d-flex justify-content-center align-items-center" style="background-image: url(${roomImage});">
                                 <div class="icon d-flex justify-content-center align-items-center">
                                     <span><i class="fa-solid fa-magnifying-glass"></i></span>
                                 </div>
@@ -55,7 +59,9 @@
                                 <p><span class="price mr-2">$${room.pricePerNight}</span> <span class="per"><spring:message code="rooms_page.per_night"/></span></p>
                                 <ul class="list">
                                     <li><span><spring:message code="rooms.max"/>:</span> ${room.maxPeople} <spring:message code="rooms.persons"/></li>
-                                    <li><span><spring:message code="rooms.bed"/>:</span> ${room.beds}</li>
+                                    <li><span><spring:message code="rooms.size"/>:</span> ${room.size}</li>
+                                    <li><span><spring:message code="rooms.view"/>:</span> ${room.view}</li>
+                                    <li><span><spring:message code="rooms.beds"/>:</span> ${room.beds}</li>
                                 </ul>
                                 <hr>
                                 <p class="pt-1"><a href="/rooms/${room.id}" class="btn-custom"><spring:message code="rooms.book_now"/> <span><i class="fa-solid fa-arrow-right"></i></span></a></p>
