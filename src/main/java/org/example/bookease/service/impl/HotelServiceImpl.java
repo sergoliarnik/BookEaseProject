@@ -47,7 +47,23 @@ public class HotelServiceImpl implements HotelService {
 
         Hotel hotel = hotelRepo.findById(id)
                 .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("Hotel", "id", id)));
-        return hotelMapper.hotelToHotelWithRoomsDto(hotel);
+
+        hotel.setRooms(
+                hotel.getRooms().stream()
+                        .filter(r -> filter.getPeopleCount() == null || r.getMaxPeople() >= filter.getPeopleCount())
+                        .filter(r -> filter.getRoomType() == null || r.getType() == filter.getRoomType())
+                        .toList()
+        );
+
+        HotelWithRoomsDto mappedFilteredHotel = hotelMapper.hotelToHotelWithRoomsDto(hotel);
+
+        if (filter.getFrom() != null && filter.getTo() != null) {
+            mappedFilteredHotel.getRooms()
+                    .forEach(r -> r.setBooked(roomReservationRepo.isBooked(r.getId(), filter.getFrom(), filter.getTo())));
+
+        }
+
+        return mappedFilteredHotel;
     }
 
     @Override

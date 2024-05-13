@@ -46,6 +46,30 @@ public class RoomController {
                 .addObject("cities", cities);
     }
 
+    @GetMapping("/hotels/{hotelId}/rooms")
+    public ModelAndView hotelRooms(@PathVariable String hotelId, RoomFilterDto roomFilterDto, BindingResult result) {
+        if (roomFilterDto.getFrom() != null && roomFilterDto.getTo() != null && roomFilterDto.getFrom().isAfter(roomFilterDto.getTo())) {
+            result.rejectValue("from", "error.from_date_must_not_be_after_to_date");
+            result.rejectValue("to", "error.to_date_must_not_be_before_from_date");
+        }
+
+        if (result.hasErrors()) {
+            return new ModelAndView("rooms")
+                    .addObject("roomTypes", RoomType.values())
+                    .addObject("roomFilterDto", roomFilterDto)
+                    .addObject("hotelId", hotelId);
+        }
+
+        List<HotelWithRoomsDto> hotelsWithRooms = List.of(hotelService.findByIdWithRooms(hotelId, roomFilterDto));
+
+        return new ModelAndView("rooms")
+                .addObject("hotelsWithRooms", hotelsWithRooms)
+                .addObject("roomTypes", RoomType.values())
+                .addObject("roomFilterDto", roomFilterDto)
+                .addObject("hotelId", hotelId);
+    }
+
+
     @GetMapping("/rooms/{roomId}")
     public ModelAndView roomsSingle(@PathVariable String roomId) {
         BookDto bookDto = new BookDto();
@@ -53,12 +77,5 @@ public class RoomController {
 
         return new ModelAndView("rooms-single")
                 .addObject("bookDto", bookDto);
-    }
-
-    @GetMapping("/hotels/{hotelId}/rooms")
-    public ModelAndView hotelRooms(@PathVariable String hotelId) {
-        List<HotelWithRoomsDto> hotelsWithRooms = List.of(hotelService.findByIdWithRooms(hotelId));
-        return new ModelAndView("rooms")
-                .addObject("hotelsWithRooms", hotelsWithRooms);
     }
 }

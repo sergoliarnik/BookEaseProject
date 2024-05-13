@@ -69,7 +69,11 @@
             <div class="col-lg-3 sidebar">
                 <div class="sidebar-wrap bg-light ftco-animate">
                     <h3 class="heading mb-4"><spring:message code="rooms_page.advanced_search"/></h3>
-                    <form:form action="rooms" modelAttribute="roomFilterDto" method="get">
+                    <c:set var="action" value="/rooms"/>
+                    <c:if test="${hotelId != null}">
+                        <c:set var="action" value="/hotels/${hotelId}/rooms"/>
+                    </c:if>
+                    <form:form action="${action}" modelAttribute="roomFilterDto" method="get">
                         <div class="fields">
                             <div class="form-group">
                                 <spring:message code="rooms.check_in_date" var="i18n_check_in_date"/>
@@ -103,6 +107,7 @@
                                     </form:select>
                                 </div>
                             </div>
+                            <c:if test="${hotelId == null}">
                             <div class="form-group">
                                 <div class="select-wrap one-third">
                                     <div class="icon"><span><i class="fa-solid fa-chevron-down"></i></span></div>
@@ -112,6 +117,7 @@
                                     </form:select>
                                 </div>
                             </div>
+                            </c:if>
                             <div class="form-group">
                                 <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
                             </div>
