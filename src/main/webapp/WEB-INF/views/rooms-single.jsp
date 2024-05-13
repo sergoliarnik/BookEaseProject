@@ -59,15 +59,6 @@
                         </div>
                         <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
                     </div>
-                    <div class="col-md-12 room-single ftco-animate mb-5 mt-4">
-                        <h3 class="mb-4"><spring:message code="rooms.take_a_tour"/></h3>
-                        <div class="block-16">
-                            <figure>
-                                <img src="/images/room-4.jpg" alt="Image placeholder" class="img-fluid">
-                                <a href="https://vimeo.com/45830194" class="play-button popup-vimeo"><span><i class="fa-solid fa-play"></i></span></a>
-                            </figure>
-                        </div>
-                    </div>
                     <div class="col-md-12 ftco-animate mb-5 mt-4">
                     <form:form action="/book" method="post" modelAttribute="bookDto" cssClass="booking-form">
                         <div class="row">

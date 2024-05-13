@@ -8,5 +8,7 @@ import java.util.List;
 public class HotelWithRoomsDto {
     private String id;
     private String name;
+    private String description;
+    private String shortDescription;
     private List<RoomDto> rooms;
 }

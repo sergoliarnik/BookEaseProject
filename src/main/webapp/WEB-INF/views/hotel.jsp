@@ -47,18 +47,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 room-single mt-4 mb-5 ftco-animate">
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-                        <div class="d-md-flex mt-5 mb-5">
-                            <ul class="list">
-                                <li><span><spring:message code="rooms.max"/>:</span> 3 <spring:message code="rooms.persons"/></li>
-                                <li><span><spring:message code="rooms.size"/>:</span> 45 m2</li>
-                            </ul>
-                            <ul class="list ml-md-5">
-                                <li><span><spring:message code="rooms.view"/>:</span> Sea View</li>
-                                <li><span><spring:message code="rooms.bed"/>:</span> 1</li>
-                            </ul>
-                        </div>
-                        <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                        <p>${hotelWithRoomsDto.description}</p>
                     </div>
                     <div class="col-md-12 room-single ftco-animate mb-5 mt-4">
                         <h3 class="mb-4"><spring:message code="rooms.take_a_tour"/></h3>
@@ -137,7 +126,7 @@
             <div class="col-lg-4 sidebar ftco-animate">
                 <div class="sidebar-box ftco-animate">
                     <h3><spring:message code="sidebar.short_description"/></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
+                    <p>${hotelWithRoomsDto.shortDescription}</p>
                 </div>
                 <div class="sidebar-box ftco-animate">
                     <h3><spring:message code="sidebar.tags"/></h3>

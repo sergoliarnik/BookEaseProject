@@ -23,6 +23,10 @@ public class Hotel {
 
     private String city;
 
+    private String description;
+
+    private String shortDescription;
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "company_id", nullable = false)
     private Company company;
