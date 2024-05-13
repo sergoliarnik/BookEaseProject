@@ -10,6 +10,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="/" class="nav-link"><spring:message code="navigation.home"/></a></li>
+                <li class="nav-item"><a href="/hotels" class="nav-link"><spring:message code="hotels"/></a></li>
                 <li class="nav-item"><a href="/rooms" class="nav-link"><spring:message code="rooms"/></a></li>
                 <li class="nav-item"><a href="/restaurant" class="nav-link"><spring:message code="restaurant.restaurant"/></a></li>
                 <li class="nav-item"><a href="/blog" class="nav-link"><spring:message code="blogs.blog"/></a></li>

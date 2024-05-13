@@ -1,6 +1,7 @@
 package org.example.bookease.service;
 
 import org.example.bookease.dto.HotelDto;
+import org.example.bookease.dto.HotelFilterDto;
 import org.example.bookease.dto.HotelWithRoomsDto;
 import org.example.bookease.dto.RoomFilterDto;
 
@@ -9,6 +10,8 @@ import java.util.List;
 public interface HotelService {
 
     List<HotelDto> findAll();
+
+    List<HotelDto> findAll(HotelFilterDto hotelFilterDto);
 
     HotelWithRoomsDto findByIdWithRooms(String id);
 

@@ -3,6 +3,7 @@ package org.example.bookease.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.example.bookease.dto.HotelDto;
+import org.example.bookease.dto.HotelFilterDto;
 import org.example.bookease.dto.HotelWithRoomsDto;
 import org.example.bookease.dto.RoomFilterDto;
 import org.example.bookease.entity.Hotel;
@@ -28,6 +29,15 @@ public class HotelServiceImpl implements HotelService {
     public List<HotelDto> findAll() {
         List<Hotel> hotels = hotelRepo.findAll();
         return hotels.stream().map(hotelMapper::hotelToHotelDto).toList();
+    }
+
+    @Override
+    public List<HotelDto> findAll(HotelFilterDto filter) {
+        List<Hotel> hotels = hotelRepo.findAll();
+        List<Hotel> filteredHotels = hotels.stream()
+                .filter(h -> ObjectUtils.isEmpty(filter.getCity()) || h.getCity().equalsIgnoreCase(filter.getCity()))
+                .toList();
+        return filteredHotels.stream().map(hotelMapper::hotelToHotelDto).toList();
     }
 
 
