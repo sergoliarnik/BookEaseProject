@@ -36,14 +36,13 @@
                         <h2 class="mb-4">${hotelWithRoomsDto.name}</h2>
                         <div class="single-slider owl-carousel">
                             <div class="item">
-                                <div class="room-img" style="background-image: url(/images/room-1.jpg);"></div>
+                                <div class="room-img" style="background-image: url(${hotelWithRoomsDto.imageUrl});"></div>
                             </div>
-                            <div class="item">
-                                <div class="room-img" style="background-image: url(/images/room-2.jpg);"></div>
-                            </div>
-                            <div class="item">
-                                <div class="room-img" style="background-image: url(/images/room-3.jpg);"></div>
-                            </div>
+                            <c:forEach var="image" items="${hotelWithRoomsDto.images}">
+                                <div class="item">
+                                    <div class="room-img" style="background-image: url(${image.imageUrl});"></div>
+                                </div>
+                            </c:forEach>
                         </div>
                     </div>
                     <div class="col-md-12 room-single mt-4 mb-5 ftco-animate">

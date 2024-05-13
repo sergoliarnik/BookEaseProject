@@ -10,5 +10,8 @@ public class HotelWithRoomsDto {
     private String name;
     private String description;
     private String shortDescription;
+    private String imageUrl;
+
     private List<RoomDto> rooms;
+    private List<HotelImageDto> images;
 }
