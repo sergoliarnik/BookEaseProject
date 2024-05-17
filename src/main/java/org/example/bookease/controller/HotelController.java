@@ -1,9 +1,9 @@
 package org.example.bookease.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.bookease.dto.HotelDto;
-import org.example.bookease.dto.HotelFilterDto;
-import org.example.bookease.dto.HotelWithRoomsDto;
+import org.example.bookease.dto.hotel.HotelDto;
+import org.example.bookease.dto.hotel.HotelFilterDto;
+import org.example.bookease.dto.hotel.HotelWithRoomsDto;
 import org.example.bookease.service.HotelService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
