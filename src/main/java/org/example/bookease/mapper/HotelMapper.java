@@ -1,7 +1,7 @@
 package org.example.bookease.mapper;
 
-import org.example.bookease.dto.HotelDto;
-import org.example.bookease.dto.HotelWithRoomsDto;
+import org.example.bookease.dto.hotel.HotelDto;
+import org.example.bookease.dto.hotel.HotelWithRoomsDto;
 import org.example.bookease.entity.Hotel;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;

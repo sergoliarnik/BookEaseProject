@@ -1,9 +1,9 @@
 package org.example.bookease.service;
 
-import org.example.bookease.dto.HotelDto;
-import org.example.bookease.dto.HotelFilterDto;
-import org.example.bookease.dto.HotelWithRoomsDto;
-import org.example.bookease.dto.RoomFilterDto;
+import org.example.bookease.dto.hotel.HotelDto;
+import org.example.bookease.dto.hotel.HotelFilterDto;
+import org.example.bookease.dto.hotel.HotelWithRoomsDto;
+import org.example.bookease.dto.room.RoomFilterDto;
 
 import java.util.List;
 

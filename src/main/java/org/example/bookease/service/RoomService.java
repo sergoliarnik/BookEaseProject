@@ -1,6 +1,6 @@
 package org.example.bookease.service;
 
-import org.example.bookease.dto.RoomDto;
+import org.example.bookease.dto.room.RoomDto;
 
 import java.util.List;
 

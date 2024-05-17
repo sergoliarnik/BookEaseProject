@@ -1,10 +1,10 @@
 package org.example.bookease.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.bookease.dto.BookDto;
-import org.example.bookease.dto.HotelWithRoomsDto;
-import org.example.bookease.dto.RoomDto;
-import org.example.bookease.dto.RoomFilterDto;
+import org.example.bookease.dto.room.BookDto;
+import org.example.bookease.dto.hotel.HotelWithRoomsDto;
+import org.example.bookease.dto.room.RoomDto;
+import org.example.bookease.dto.room.RoomFilterDto;
 import org.example.bookease.entity.RoomType;
 import org.example.bookease.service.HotelService;
 import org.example.bookease.service.RoomService;

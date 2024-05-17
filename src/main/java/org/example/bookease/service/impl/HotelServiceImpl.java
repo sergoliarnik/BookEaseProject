@@ -2,10 +2,10 @@ package org.example.bookease.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import org.example.bookease.dto.HotelDto;
-import org.example.bookease.dto.HotelFilterDto;
-import org.example.bookease.dto.HotelWithRoomsDto;
-import org.example.bookease.dto.RoomFilterDto;
+import org.example.bookease.dto.hotel.HotelDto;
+import org.example.bookease.dto.hotel.HotelFilterDto;
+import org.example.bookease.dto.hotel.HotelWithRoomsDto;
+import org.example.bookease.dto.room.RoomFilterDto;
 import org.example.bookease.entity.Hotel;
 import org.example.bookease.mapper.HotelMapper;
 import org.example.bookease.repository.HotelRepo;

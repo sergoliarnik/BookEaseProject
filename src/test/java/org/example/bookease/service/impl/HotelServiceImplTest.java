@@ -1,18 +1,16 @@
 package org.example.bookease.service.impl;
 
-import org.example.bookease.dto.HotelDto;
-import org.example.bookease.dto.HotelFilterDto;
+import org.example.bookease.dto.hotel.HotelDto;
+import org.example.bookease.dto.hotel.HotelFilterDto;
 import org.example.bookease.entity.Hotel;
 import org.example.bookease.mapper.HotelMapper;
 import org.example.bookease.repository.HotelRepo;
 import org.example.bookease.repository.RoomReservationRepo;
-import org.example.bookease.service.HotelService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.util.ObjectUtils;
 
 import java.util.List;
 

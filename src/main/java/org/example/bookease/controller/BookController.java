@@ -1,8 +1,8 @@
 package org.example.bookease.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.bookease.dto.BookDto;
-import org.example.bookease.dto.RoomReservationDto;
+import org.example.bookease.dto.room.BookDto;
+import org.example.bookease.dto.room.RoomReservationDto;
 import org.example.bookease.service.RoomReservationService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

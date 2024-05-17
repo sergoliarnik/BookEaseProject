@@ -2,8 +2,8 @@ package org.example.bookease.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import org.example.bookease.dto.BookDto;
-import org.example.bookease.dto.RoomReservationDto;
+import org.example.bookease.dto.room.BookDto;
+import org.example.bookease.dto.room.RoomReservationDto;
 import org.example.bookease.entity.Room;
 import org.example.bookease.entity.RoomReservation;
 import org.example.bookease.entity.User;
@@ -20,7 +20,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor

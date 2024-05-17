@@ -1,7 +1,7 @@
 package org.example.bookease.service.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.example.bookease.dto.RoomDto;
+import org.example.bookease.dto.room.RoomDto;
 import org.example.bookease.entity.Room;
 import org.example.bookease.mapper.RoomMapper;
 import org.example.bookease.repository.HotelRepo;

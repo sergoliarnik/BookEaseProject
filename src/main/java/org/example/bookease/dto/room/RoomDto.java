@@ -1,4 +1,4 @@
-package org.example.bookease.dto;
+package org.example.bookease.dto.room;
 
 import lombok.Data;
 import org.example.bookease.entity.RoomType;

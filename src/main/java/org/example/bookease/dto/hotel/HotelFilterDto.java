@@ -1,4 +1,4 @@
-package org.example.bookease.dto;
+package org.example.bookease.dto.hotel;
 
 import lombok.Data;
 
