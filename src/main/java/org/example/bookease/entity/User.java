@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -37,4 +38,7 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<RoomReservation> roomReservationList;
+
+    @OneToOne(mappedBy = "user")
+    private Company company;
 }

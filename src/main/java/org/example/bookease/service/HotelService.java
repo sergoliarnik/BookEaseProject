@@ -1,5 +1,6 @@
 package org.example.bookease.service;
 
+import org.example.bookease.dto.hotel.AddHotelDto;
 import org.example.bookease.dto.hotel.HotelDto;
 import org.example.bookease.dto.hotel.HotelFilterDto;
 import org.example.bookease.dto.hotel.HotelWithRoomsDto;
@@ -17,9 +18,9 @@ public interface HotelService {
 
     HotelWithRoomsDto findByIdWithRooms(String id, RoomFilterDto filter);
 
-    List<HotelWithRoomsDto> findAllWithRooms();
-
     List<HotelWithRoomsDto> findAllWithRooms(RoomFilterDto filter);
 
     List<String> findAllHotelsCities();
+
+    void save(AddHotelDto addHotelDto);
 }

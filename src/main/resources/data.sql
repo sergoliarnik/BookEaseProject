@@ -6,9 +6,13 @@ DELETE FROM restaurant;
 DELETE FROM company;
 DELETE FROM users;
 
+-- USERS
+INSERT INTO users (id, name, surname, email, role, password)
+    VALUES ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'admin', 'admin', 'admin@gmail.com', 2, '$2a$05$93M57WHTa9x9nW7DWUW.y.y3oTQtsNQGTMzVoTDE/m6DgEdW6Dg1O');
+
 -- COMPANIES
-INSERT INTO company (id, name)
-    VALUES ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'Zakarpatya');
+INSERT INTO company (id, name, user_id)
+    VALUES ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'Zakarpatya', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc');
 
 -- HOTELS
 INSERT INTO hotel (id, name, image_url, city, description, short_description, company_id)

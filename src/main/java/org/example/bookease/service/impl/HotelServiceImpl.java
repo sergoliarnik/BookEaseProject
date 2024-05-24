@@ -2,6 +2,7 @@ package org.example.bookease.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
+import org.example.bookease.dto.hotel.AddHotelDto;
 import org.example.bookease.dto.hotel.HotelDto;
 import org.example.bookease.dto.hotel.HotelFilterDto;
 import org.example.bookease.dto.hotel.HotelWithRoomsDto;
@@ -17,6 +18,7 @@ import org.springframework.util.ObjectUtils;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -77,12 +79,6 @@ public class HotelServiceImpl implements HotelService {
     }
 
     @Override
-    public List<HotelWithRoomsDto> findAllWithRooms() {
-        List<Hotel> hotels = hotelRepo.findAll();
-        return hotels.stream().map(hotelMapper::hotelToHotelWithRoomsDto).toList();
-    }
-
-    @Override
     @SneakyThrows
     public List<HotelWithRoomsDto> findAllWithRooms(RoomFilterDto filter) {
         if (filter.getFrom() != null && filter.getTo() != null && filter.getFrom().isAfter(filter.getTo())) {
@@ -119,5 +115,12 @@ public class HotelServiceImpl implements HotelService {
     @Override
     public List<String> findAllHotelsCities() {
         return hotelRepo.findAllHotelsCities();
+    }
+
+    @Override
+    public void save(AddHotelDto addHotelDto) {
+        Hotel hotel = hotelMapper.addHotelDtoToHotel(addHotelDto);
+        hotel.setId(UUID.randomUUID().toString());
+        hotelRepo.save(hotel);
     }
 }

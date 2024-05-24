@@ -51,7 +51,7 @@
             </div>
             <div class="col-lg-3 sidebar">
                 <div class="sidebar-wrap bg-light ftco-animate">
-                    <h3 class="heading mb-4"><spring:message code="rooms_page.advanced_search"/></h3>
+                    <h3 class="heading mb-4"><spring:message code="sidebar.advanced_search"/></h3>
                     <form:form action="/hotels" modelAttribute="hotelFilterDto" method="get">
                         <div class="fields">
                             <div class="form-group">
@@ -64,13 +64,23 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+                                <input type="submit" value="<spring:message code="button.search"/>" class="btn btn-primary py-3 px-5">
                             </div>
                         </div>
                     </form:form>
                 </div>
                 <div class="sidebar-wrap bg-light ftco-animate">
-                    <h3 class="heading mb-4"><spring:message code="rooms_page.star_rating"/></h3>
+                    <h3 class="heading mb-4"><spring:message code="hotels.add_hotel"/></h3>
+                    <form action="<c:url value="/hotels/add"/>" method="get">
+                        <div class="fields">
+                            <div class="form-group">
+                                <input type="submit" value="<spring:message code="hotels.add_hotel"/>" class="btn btn-primary py-3 px-5">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-wrap bg-light ftco-animate">
+                    <h3 class="heading mb-4"><spring:message code="sidebar.star_rating"/></h3>
                     <form method="post" class="star-rating">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">

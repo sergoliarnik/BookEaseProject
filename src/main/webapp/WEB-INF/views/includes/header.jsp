@@ -9,19 +9,36 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="/" class="nav-link"><spring:message code="navigation.home"/></a></li>
-                <li class="nav-item"><a href="/hotels" class="nav-link"><spring:message code="hotels"/></a></li>
-                <li class="nav-item"><a href="/rooms" class="nav-link"><spring:message code="rooms"/></a></li>
-                <li class="nav-item"><a href="/restaurant" class="nav-link"><spring:message code="restaurant.restaurant"/></a></li>
-                <li class="nav-item"><a href="/blog" class="nav-link"><spring:message code="blogs.blog"/></a></li>
-                <li class="nav-item"><a href="/contact" class="nav-link"><spring:message code="contact"/></a></li>
-                <sec:authorize access="!isAuthenticated()">
-                    <li class="nav-item"><a href="/login" class="nav-link"><spring:message code="login"/></a></li>
-                    <li class="nav-item"><a href="/register" class="nav-link"><spring:message code="register"/></a></li>
+                <sec:authorize access="hasAnyAuthority('OWNER')">
+                    <li class="nav-item"><a href="/" class="nav-link"><spring:message code="navigation.home"/></a></li>
+                    <li class="nav-item"><a href="/hotels" class="nav-link"><spring:message code="hotels"/></a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link"><spring:message code="contact"/></a></li>
                 </sec:authorize>
-                <sec:authorize access="isAuthenticated()">
+                <sec:authorize access="hasAnyAuthority('MANAGER')">
+                    <li class="nav-item"><a href="/" class="nav-link"><spring:message code="navigation.home"/></a></li>
+                    <li class="nav-item"><a href="/rooms" class="nav-link"><spring:message code="rooms"/></a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link"><spring:message code="contact"/></a></li>
+                    <li class="nav-item"><a href="/logout" class="nav-link"><spring:message code="logout"/></a></li>
+                </sec:authorize>
+                <sec:authorize access="hasAnyAuthority('CUSTOMER')">
+                    <li class="nav-item"><a href="/" class="nav-link"><spring:message code="navigation.home"/></a></li>
+                    <li class="nav-item"><a href="/hotels" class="nav-link"><spring:message code="hotels"/></a></li>
+                    <li class="nav-item"><a href="/rooms" class="nav-link"><spring:message code="rooms"/></a></li>
+                    <li class="nav-item"><a href="/restaurant" class="nav-link"><spring:message code="restaurant.restaurant"/></a></li>
+                    <li class="nav-item"><a href="/blog" class="nav-link"><spring:message code="blogs.blog"/></a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link"><spring:message code="contact"/></a></li>
                     <li class="nav-item"><a href="/reservations" class="nav-link"><spring:message code="rooms.reservations"/></a></li>
                     <li class="nav-item"><a href="/logout" class="nav-link"><spring:message code="logout"/></a></li>
+                </sec:authorize>
+                <sec:authorize access="!isAuthenticated()">
+                    <li class="nav-item"><a href="/" class="nav-link"><spring:message code="navigation.home"/></a></li>
+                    <li class="nav-item"><a href="/hotels" class="nav-link"><spring:message code="hotels"/></a></li>
+                    <li class="nav-item"><a href="/rooms" class="nav-link"><spring:message code="rooms"/></a></li>
+                    <li class="nav-item"><a href="/restaurant" class="nav-link"><spring:message code="restaurant.restaurant"/></a></li>
+                    <li class="nav-item"><a href="/blog" class="nav-link"><spring:message code="blogs.blog"/></a></li>
+                    <li class="nav-item"><a href="/contact" class="nav-link"><spring:message code="contact"/></a></li>
+                    <li class="nav-item"><a href="/login" class="nav-link"><spring:message code="login"/></a></li>
+                    <li class="nav-item"><a href="/register" class="nav-link"><spring:message code="register"/></a></li>
                 </sec:authorize>
             </ul>
         </div>

@@ -3,6 +3,7 @@ package org.example.bookease.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,4 +23,7 @@ public class Company {
 
     @OneToMany(mappedBy = "company")
     List<Restaurant> restaurants;
+
+    @OneToOne
+    private User user;
 }

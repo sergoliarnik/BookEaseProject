@@ -33,4 +33,8 @@ public final class ErrorMessages {
 
         return "These dates have been booked: " + datesWithSeparator;
     }
+
+    public static String getUserIsNotOwner(String email) {
+        return String.format("User with 'email': %s is not 'OWNER'", email);
+    }
 }

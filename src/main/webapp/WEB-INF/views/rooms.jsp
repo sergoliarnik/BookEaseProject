@@ -74,7 +74,7 @@
             </div>
             <div class="col-lg-3 sidebar">
                 <div class="sidebar-wrap bg-light ftco-animate">
-                    <h3 class="heading mb-4"><spring:message code="rooms_page.advanced_search"/></h3>
+                    <h3 class="heading mb-4"><spring:message code="sidebar.advanced_search"/></h3>
                     <c:set var="action" value="/rooms"/>
                     <c:if test="${hotelId != null}">
                         <c:set var="action" value="/hotels/${hotelId}/rooms"/>
@@ -131,7 +131,7 @@
                     </form:form>
                 </div>
                 <div class="sidebar-wrap bg-light ftco-animate">
-                    <h3 class="heading mb-4"><spring:message code="rooms_page.star_rating"/></h3>
+                    <h3 class="heading mb-4"><spring:message code="sidebar.star_rating"/></h3>
                     <form method="post" class="star-rating">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
