@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 <spring:message code="hotels" var="hotels_i18n"/>
@@ -69,6 +70,7 @@
                         </div>
                     </form:form>
                 </div>
+                <sec:authorize access="hasAnyAuthority('OWNER')">
                 <div class="sidebar-wrap bg-light ftco-animate">
                     <h3 class="heading mb-4"><spring:message code="hotels.add_hotel"/></h3>
                     <form action="<c:url value="/hotels/add"/>" method="get">
@@ -79,6 +81,7 @@
                         </div>
                     </form>
                 </div>
+                </sec:authorize>
                 <div class="sidebar-wrap bg-light ftco-animate">
                     <h3 class="heading mb-4"><spring:message code="sidebar.star_rating"/></h3>
                     <form method="post" class="star-rating">

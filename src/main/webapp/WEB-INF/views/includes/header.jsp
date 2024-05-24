@@ -13,6 +13,7 @@
                     <li class="nav-item"><a href="/" class="nav-link"><spring:message code="navigation.home"/></a></li>
                     <li class="nav-item"><a href="/hotels" class="nav-link"><spring:message code="hotels"/></a></li>
                     <li class="nav-item"><a href="/contact" class="nav-link"><spring:message code="contact"/></a></li>
+                    <li class="nav-item"><a href="/logout" class="nav-link"><spring:message code="logout"/></a></li>
                 </sec:authorize>
                 <sec:authorize access="hasAnyAuthority('MANAGER')">
                     <li class="nav-item"><a href="/" class="nav-link"><spring:message code="navigation.home"/></a></li>
