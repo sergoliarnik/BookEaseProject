@@ -15,6 +15,7 @@ import org.example.bookease.service.RoomReservationService;
 import org.example.bookease.util.ErrorMessages;
 import org.springframework.data.util.Pair;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -23,6 +24,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class RoomReservationServiceImpl implements RoomReservationService {
 
     private final RoomRepo roomRepo;

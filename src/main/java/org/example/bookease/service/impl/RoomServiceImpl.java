@@ -1,6 +1,7 @@
 package org.example.bookease.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.example.bookease.dto.room.AddRoomDto;
 import org.example.bookease.dto.room.RoomDto;
 import org.example.bookease.entity.Room;
 import org.example.bookease.mapper.RoomMapper;
@@ -9,12 +10,15 @@ import org.example.bookease.repository.RoomRepo;
 import org.example.bookease.service.RoomService;
 import org.example.bookease.util.ErrorMessages;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class RoomServiceImpl implements RoomService {
     private final RoomRepo roomRepo;
     private final RoomMapper roomMapper;
@@ -41,5 +45,12 @@ public class RoomServiceImpl implements RoomService {
         Room room = roomRepo.findById(roomId)
                 .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("Room", "id", roomId)));
         return roomMapper.roomToRoomDto(room);
+    }
+
+    @Override
+    public void save(AddRoomDto addRoomDto) {
+        Room room = roomMapper.addRoomDtoToRoom(addRoomDto);
+        room.setId(UUID.randomUUID().toString());
+        roomRepo.save(room);
     }
 }

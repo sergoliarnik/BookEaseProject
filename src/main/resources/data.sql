@@ -1,6 +1,7 @@
 DELETE FROM room_image;
 DELETE FROM room_reservation;
 DELETE FROM room;
+DELETE FROM hotel_image;
 DELETE FROM hotel;
 DELETE FROM restaurant;
 DELETE FROM company;
@@ -8,17 +9,20 @@ DELETE FROM users;
 
 -- USERS
 INSERT INTO users (id, name, surname, email, role, password)
-    VALUES ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'admin', 'admin', 'admin@gmail.com', 2, '$2a$05$93M57WHTa9x9nW7DWUW.y.y3oTQtsNQGTMzVoTDE/m6DgEdW6Dg1O');
+    VALUES ('a8f14c61-f90e-44d7-8994-a305e51ff2fd', 'admin', 'admin', 'admin@gmail.com', 2, '$2a$05$93M57WHTa9x9nW7DWUW.y.y3oTQtsNQGTMzVoTDE/m6DgEdW6Dg1O'),
+           ('a8f14c61-f90e-44d7-8994-a305e51ff2fa', 'manager', 'manager', 'manager1@gmail.com', 1, '$2a$05$93M57WHTa9x9nW7DWUW.y.y3oTQtsNQGTMzVoTDE/m6DgEdW6Dg1O'),
+           ('a8f14c61-f90e-44d7-8994-a305e51ff2fb', 'manager', 'manager', 'manager2@gmail.com', 1, '$2a$05$93M57WHTa9x9nW7DWUW.y.y3oTQtsNQGTMzVoTDE/m6DgEdW6Dg1O'),
+           ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'manager', 'manager', 'manager3@gmail.com', 1, '$2a$05$93M57WHTa9x9nW7DWUW.y.y3oTQtsNQGTMzVoTDE/m6DgEdW6Dg1O');
 
 -- COMPANIES
 INSERT INTO company (id, name, user_id)
-    VALUES ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'Zakarpatya', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc');
+    VALUES ('a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'Zakarpatya', 'a8f14c61-f90e-44d7-8994-a305e51ff2fd');
 
 -- HOTELS
-INSERT INTO hotel (id, name, image_url, city, description, short_description, company_id)
-    VALUES ('8788b001-269e-4dbd-92c8-b647b478def0', 'Nicole', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/320119866.jpg?k=d684c994fac2d86d7dea7190d899de1b63313867201afa44d69b5c6f7e348956&o=&hp=1', 'Uzhhorod', 'Indulge in sophistication at Nicole Hotel. Seamlessly blending contemporary style with timeless charm, our boutique hotel offers refined accommodations, exceptional dining, and personalized service, promising a stay of unparalleled luxury and comfort','Indulge in sophistication at Nicole Hotel. Seamlessly blending contemporary style with timeless charm, our boutique hotel offers refined accommodations, exceptional dining, and personalized service, promising a stay of unparalleled luxury and comfort', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc'),
-           ('0bec3c56-9393-47b2-8061-1030ef4dc2ef', 'Ferdinand', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271575031.jpg?k=a0c242b696717246180d2c087957e87249767cf34b73eb5595ec97152146c717&o=&hp=1', 'Mukachevo', 'Experience luxury at Ferdinand Hotel, where timeless elegance meets modern comfort. Nestled in the heart of the city, our boutique hotel offers impeccable service, exquisite dining, and lavish amenities for an unforgettable stay.', 'Experience luxury at Ferdinand Hotel, where timeless elegance meets modern comfort. Nestled in the heart of the city, our boutique hotel offers impeccable service, exquisite dining, and lavish amenities for an unforgettable stay.', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc'),
-           ('0fb4ea23-eb3e-411b-b548-db62d052c99a', 'Forsage', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/462140029.jpg?k=93c4a657f9e0210a12931c1b16a46ed37ac4ae3af8761da7925794cfc45c5539&o=&hp=1','Uzhhorod', 'Discover unparalleled hospitality at Forsage Hotel. Located amidst breathtaking landscapes, our boutique hotel offers opulent accommodations, gourmet dining, and bespoke experiences, ensuring a truly memorable retreat', 'Discover unparalleled hospitality at Forsage Hotel. Located amidst breathtaking landscapes, our boutique hotel offers opulent accommodations, gourmet dining, and bespoke experiences, ensuring a truly memorable retreat', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc');
+INSERT INTO hotel (id, name, image_url, city, description, short_description, company_id, user_id)
+    VALUES ('8788b001-269e-4dbd-92c8-b647b478def0', 'Nicole', 'https://cf.bstatic.com/xdata/images/hotel/max1280x900/320119866.jpg?k=d684c994fac2d86d7dea7190d899de1b63313867201afa44d69b5c6f7e348956&o=&hp=1', 'Uzhhorod', 'Indulge in sophistication at Nicole Hotel. Seamlessly blending contemporary style with timeless charm, our boutique hotel offers refined accommodations, exceptional dining, and personalized service, promising a stay of unparalleled luxury and comfort','Indulge in sophistication at Nicole Hotel. Seamlessly blending contemporary style with timeless charm, our boutique hotel offers refined accommodations, exceptional dining, and personalized service, promising a stay of unparalleled luxury and comfort', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'a8f14c61-f90e-44d7-8994-a305e51ff2fa'),
+           ('0bec3c56-9393-47b2-8061-1030ef4dc2ef', 'Ferdinand', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/271575031.jpg?k=a0c242b696717246180d2c087957e87249767cf34b73eb5595ec97152146c717&o=&hp=1', 'Mukachevo', 'Experience luxury at Ferdinand Hotel, where timeless elegance meets modern comfort. Nestled in the heart of the city, our boutique hotel offers impeccable service, exquisite dining, and lavish amenities for an unforgettable stay.', 'Experience luxury at Ferdinand Hotel, where timeless elegance meets modern comfort. Nestled in the heart of the city, our boutique hotel offers impeccable service, exquisite dining, and lavish amenities for an unforgettable stay.', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'a8f14c61-f90e-44d7-8994-a305e51ff2fb'),
+           ('0fb4ea23-eb3e-411b-b548-db62d052c99a', 'Forsage', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/462140029.jpg?k=93c4a657f9e0210a12931c1b16a46ed37ac4ae3af8761da7925794cfc45c5539&o=&hp=1','Uzhhorod', 'Discover unparalleled hospitality at Forsage Hotel. Located amidst breathtaking landscapes, our boutique hotel offers opulent accommodations, gourmet dining, and bespoke experiences, ensuring a truly memorable retreat', 'Discover unparalleled hospitality at Forsage Hotel. Located amidst breathtaking landscapes, our boutique hotel offers opulent accommodations, gourmet dining, and bespoke experiences, ensuring a truly memorable retreat', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc', 'a8f14c61-f90e-44d7-8994-a305e51ff2fc');
 
 -- ROOMS IMAGE
 INSERT INTO hotel_image (id, hotel_id, image_url)

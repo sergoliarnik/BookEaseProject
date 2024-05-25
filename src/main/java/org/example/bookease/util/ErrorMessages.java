@@ -2,6 +2,7 @@ package org.example.bookease.util;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import org.example.bookease.entity.UserRole;
 import org.springframework.data.util.Pair;
 
 import java.time.LocalDate;
@@ -34,7 +35,7 @@ public final class ErrorMessages {
         return "These dates have been booked: " + datesWithSeparator;
     }
 
-    public static String getUserIsNotOwner(String email) {
-        return String.format("User with 'email': %s is not 'OWNER'", email);
+    public static String getUserHasNotExpectedRole(String email, UserRole userRole) {
+        return String.format("User with 'email': %s is not '%s'", email, userRole.name());
     }
 }

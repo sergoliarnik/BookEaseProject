@@ -1,4 +1,4 @@
-package org.example.bookease.dto;
+package org.example.bookease.dto.user;
 
 import lombok.Data;
 

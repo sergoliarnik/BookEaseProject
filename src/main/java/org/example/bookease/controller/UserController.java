@@ -1,7 +1,7 @@
 package org.example.bookease.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.bookease.dto.RegisterUserDto;
+import org.example.bookease.dto.user.RegisterUserDto;
 import org.example.bookease.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;

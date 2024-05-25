@@ -7,13 +7,16 @@ import org.example.bookease.dto.hotel.HotelDto;
 import org.example.bookease.dto.hotel.HotelFilterDto;
 import org.example.bookease.dto.hotel.HotelWithRoomsDto;
 import org.example.bookease.dto.room.RoomFilterDto;
+import org.example.bookease.entity.Company;
 import org.example.bookease.entity.Hotel;
 import org.example.bookease.mapper.HotelMapper;
+import org.example.bookease.repository.CompanyRepo;
 import org.example.bookease.repository.HotelRepo;
 import org.example.bookease.repository.RoomReservationRepo;
 import org.example.bookease.service.HotelService;
 import org.example.bookease.util.ErrorMessages;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ObjectUtils;
 
 import java.util.List;
@@ -22,10 +25,12 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class HotelServiceImpl implements HotelService {
     private final HotelRepo hotelRepo;
     private final RoomReservationRepo roomReservationRepo;
     private final HotelMapper hotelMapper;
+    private final CompanyRepo companyRepo;
 
     @Override
     public List<HotelDto> findAll() {
@@ -122,5 +127,18 @@ public class HotelServiceImpl implements HotelService {
         Hotel hotel = hotelMapper.addHotelDtoToHotel(addHotelDto);
         hotel.setId(UUID.randomUUID().toString());
         hotelRepo.save(hotel);
+    }
+
+    @Override
+    public List<HotelDto> findAllByCompanyId(String companyId) {
+        Company company = companyRepo.findById(companyId)
+                .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("Company", "id", companyId)));
+        return company.getHotels().stream().map(hotelMapper::hotelToHotelDto).toList();
+    }
+
+    @Override
+    public HotelDto findByManagerId(String managerId) {
+        return hotelRepo.findByUserId(managerId)
+                .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("Hotel", "id", managerId)));
     }
 }

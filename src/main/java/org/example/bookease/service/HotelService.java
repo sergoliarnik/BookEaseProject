@@ -23,4 +23,8 @@ public interface HotelService {
     List<String> findAllHotelsCities();
 
     void save(AddHotelDto addHotelDto);
+
+    List<HotelDto> findAllByCompanyId(String companyId);
+
+    HotelDto findByManagerId(String managerId);
 }

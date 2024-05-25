@@ -12,11 +12,13 @@ import org.example.bookease.repository.UserRepo;
 import org.example.bookease.service.CompanyService;
 import org.example.bookease.util.ErrorMessages;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.NoSuchElementException;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class CompanyServiceImpl implements CompanyService {
     private final CompanyRepo companyRepo;
     private final UserRepo userRepo;
@@ -29,7 +31,7 @@ public class CompanyServiceImpl implements CompanyService {
                 .orElseThrow(() -> new NoSuchElementException(ErrorMessages.getNotFound("User", "email", email)));
 
         if (user.getRole() != UserRole.OWNER) {
-            throw new IllegalAccessException(ErrorMessages.getUserIsNotOwner(email));
+            throw new IllegalAccessException(ErrorMessages.getUserHasNotExpectedRole(email, UserRole.OWNER));
         }
 
         Company company = companyRepo.findByUserEmail(email)

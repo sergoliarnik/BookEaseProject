@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 <spring:message code="rooms" var="rooms_i18n"/>
@@ -87,7 +88,7 @@
                                 <form:errors path="from" cssClass="is-invalid sidebar-form-error" element="div"/>
                             </div>
                             <div class="form-group">
-                                <spring:message code="rooms.check_in_date" var="i18n_check_out_date"/>
+                                <spring:message code="rooms.check_out_date" var="i18n_check_out_date"/>
                                 <form:input type="text" path="to" class="form-control" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="${i18n_check_out_date}"/>
                                 <form:errors path="to" cssClass="is-invalid sidebar-form-error" element="div"/>
                             </div>
@@ -125,11 +126,23 @@
                             </div>
                             </c:if>
                             <div class="form-group">
-                                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+                                <input type="submit" value="<spring:message code="button.search"/>" class="btn btn-primary py-3 px-5">
                             </div>
                         </div>
                     </form:form>
                 </div>
+                <sec:authorize access="hasAnyAuthority('OWNER', 'MANAGER')">
+                    <div class="sidebar-wrap bg-light ftco-animate">
+                        <h3 class="heading mb-4"><spring:message code="rooms.add_room"/></h3>
+                        <form action="<c:url value="/rooms/add"/>" method="get">
+                            <div class="fields">
+                                <div class="form-group">
+                                    <input type="submit" value="<spring:message code="rooms.add_room"/>" class="btn btn-primary py-3 px-5">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </sec:authorize>
                 <div class="sidebar-wrap bg-light ftco-animate">
                     <h3 class="heading mb-4"><spring:message code="sidebar.star_rating"/></h3>
                     <form method="post" class="star-rating">
