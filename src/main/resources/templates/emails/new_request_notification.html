@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>New Request Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #0073e6;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h2 {
+            color: #333333;
+        }
+
+        .content p {
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        .details {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .details th,
+        .details td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .details th {
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+
+        .details td {
+            background-color: #ffffff;
+        }
+
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .message {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-left: 5px solid #0073e6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>New Request Notification</h1>
+    </div>
+    <div class="content">
+        <h2>Dear ${to},</h2>
+        <p>You have new request from ${from}:</p>
+        <div class="message">
+            <p><strong>${subject}</strong></p>
+            <p>${message}</p>
+        </div>
+        <p>To see all requests visit this link: <a href="http://localhost:8080/requests"></a></p>
+
+        <p>Sincerely,</p>
+        <p>Bookease</p>
+    </div>
+    <div class="footer">
+        <p>
+            Uzhhorod hotel, Bohdana Khmel'nyts'koho Square, 2, Uzhhorod, Zakarpattia Oblast, 88000 | +380 99 000 0000 |
+            <a href="mailto:[Hotel Email]">info@bookease.com</a>
+        </p>
+        <p>&copy; 2024 Bookease. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
