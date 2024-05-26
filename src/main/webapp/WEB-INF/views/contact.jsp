@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
 <spring:message code="contact" var="contact_i18n"/>
@@ -55,24 +56,33 @@
         </div>
         <div class="row block-9">
             <div class="col-md-6 order-md-last d-flex">
-                <form action="#" class="bg-white p-5 contact-form">
+                <form:form action="/requests" modelAttribute="addRequestDto" method="post" cssClass="bg-white p-5 contact-form">
                     <div class="form-group">
-
-                        <input type="text" class="form-control" placeholder="<spring:message code="users.name"/>">
+                        <spring:message code="users.name" var="name_i18n"/>
+                        <form:input path="name" type="text" class="form-control" placeholder="${name_i18n}"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="<spring:message code="users.email"/>">
+                        <spring:message code="users.email" var="email_i18n"/>
+                        <form:input path="email" type="email" class="form-control" placeholder="${email_i18n}"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="<spring:message code="contact.subject"/>">
+                        <spring:message code="requests.subject" var="subject_i18n"/>
+                        <form:input path="subject" type="text" class="form-control" placeholder="${subject_i18n}"/>
                     </div>
                     <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="<spring:message code="contact.message"/>"></textarea>
+                        <spring:message code="requests.message" var="message_i18n"/>
+                        <form:textarea path="message" cols="30" rows="7" class="form-control" placeholder="${message_i18n}"/>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <form:checkbox path="newCompanyRequest" class="form-check-input"/>
+                            <form:label path="newCompanyRequest" class="form-check-label"><spring:message code="requests.you_want_to_join_us"/>?</form:label>
+                        </div>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="<spring:message code="button.send_message"/>" class="btn btn-primary py-3 px-5">
                     </div>
-                </form>
+                </form:form>
 
             </div>
 
